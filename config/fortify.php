@@ -1,6 +1,7 @@
 <?php
 
 use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Fortify\Features;
 
 return [
@@ -61,7 +62,30 @@ return [
     |
     */
 
-    'home' => RouteServiceProvider::HOME,
+    //'home' => RouteServiceProvider::HOME,
+    'home' => function(){
+        //if you want to go to a specific route
+
+        //or if you have a bunch of redirection options
+        if (Auth::user()->role == 'admin') {
+           return route('adminDashboard');
+        }
+        elseif(Auth::user()->role == 'user'){
+            return route('userDashboard');
+        }
+        elseif(Auth::user()->role == 'doctor'){
+            return route('doctorDashboard');
+        }
+        elseif(Auth::user()->role == 'nurse'){
+            return route('nurseDashboard');
+        }
+        elseif(Auth::user()->role == 'pharmacy'){
+            return route('pharmacyDashboard');
+        }
+        else{
+            return route('home');
+        }
+    },
 
     /*
     |--------------------------------------------------------------------------

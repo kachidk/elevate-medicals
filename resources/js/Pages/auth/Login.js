@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import backgroundImage from './assets/images/auth-image.jpg';
 import {Inertia} from '@inertiajs/inertia';
 import{InertiaLink, usePage} from '@inertiajs/inertia-react';
+import backgroundImage from './assets/images/auth-image.jpg';
+import logo from '@/assets/images/elevateLogo.png';
 
 function Login() {
     const [form, setForm] = useState({
@@ -34,7 +35,9 @@ function Login() {
                 <div className="flex flex-col w-full md:w-1/2">
 
                     <div className="flex justify-center pt-12 md:justify-start md:pl-12 md:-mb-24">
-                        <InertiaLink href="/" className="p-4 text-xl font-bold text-white bg-black">Logo</InertiaLink>
+                        <InertiaLink href="/">
+                          <img src={logo} className="w-14 h-14"/>
+                        </InertiaLink>
                     </div>
 
                     <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
