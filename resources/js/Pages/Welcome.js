@@ -4,7 +4,8 @@ import { InertiaLink, usePage } from '@inertiajs/inertia-react';
 import logo from '@/assets/images/elevateLogo.png';
 
 function Welcome({canLogin, canRegister}) {
-    const auth = usePage().props.user
+    const auth = usePage().props.user;
+    const authRole = usePage().props.user ? usePage().props.user.role : false;
 
     return (
       <>
@@ -25,7 +26,12 @@ function Welcome({canLogin, canRegister}) {
               { canLogin &&
                 <>
                   {  auth ?
-                    <InertiaLink href="/home" className="inline-flex px-8 py-4 mr-4 tracking-widest text-white uppercase transition duration-500 ease-in-out transform bg-gray-500 sm:mb-0 hover:bg-purple-600 hover:-translate-y-1 hover:scale-110 focus:bg-purple-600 focus:-translate-y-1 focus:scale-110">
+                    <InertiaLink className="inline-flex px-8 py-4 mr-4 tracking-widest text-white uppercase transition duration-500 ease-in-out transform bg-gray-500 sm:mb-0 hover:bg-purple-600 hover:-translate-y-1 hover:scale-110 focus:bg-purple-600 focus:-translate-y-1 focus:scale-110"
+                      href={authRole == 'nurse' ?
+                              "/nurseDashboard" :
+                            "/home"
+                      }
+                    >
                         Dashboard
                     </InertiaLink>
                     :

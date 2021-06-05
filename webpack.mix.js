@@ -23,4 +23,9 @@ mix.js('resources/js/app.js', 'public/js')
                 '@': path.resolve('resources/js')
             },
         },
-    });
+    })
+  //  .browserSync('localhost:8000')
+;
+
+// "browser-sync": "2.26.14",
+// "browser-sync-webpack-plugin": "2.2.2",

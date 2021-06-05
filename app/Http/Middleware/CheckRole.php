@@ -31,6 +31,9 @@ class CheckRole
         if ($role == 'pharmacy' && auth()->user()->role != 'pharmacy' ) {
             abort(403);
         }
+        if ($role == 'lab' && auth()->user()->role != 'lab' ) {
+            abort(403);
+        }
         return $next($request);
     }
 }

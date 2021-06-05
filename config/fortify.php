@@ -82,8 +82,11 @@ return [
         elseif(Auth::user()->role == 'pharmacy'){
             return route('pharmacyDashboard');
         }
+        elseif(Auth::user()->role == 'lab'){
+            return route('labDashboard');
+        }
         else{
-            return route('home');
+            return auth()->logout();
         }
     },
 

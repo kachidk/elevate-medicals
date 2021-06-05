@@ -49,5 +49,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['middleware' => 'role:pharmacy'], function() {
         require 'custom/pharmacyRoute.php';
     });
+    Route::group(['middleware' => 'role:lab'], function() {
+        require 'custom/labRoute.php';
+    });
 
 });
