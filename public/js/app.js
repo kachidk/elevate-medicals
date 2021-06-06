@@ -20195,42 +20195,26 @@ function DoctorSidebar(_ref) {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_5__.default, {
               component: "div",
               disablePadding: true,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_6__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_6__.default, {
+                component: _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.InertiaLink,
+                href: "/doctorTodayAppointment",
                 button: true,
                 className: classes.nested,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.InertiaLink, {
-                  href: "/nurseAddAppointment",
-                  className: "flex items-center w-full",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons__WEBPACK_IMPORTED_MODULE_13__.default, {
-                    className: classes.listIcons
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_8__.default, {
-                    primary: "Add Appointment"
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_6__.default, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons__WEBPACK_IMPORTED_MODULE_13__.default, {
+                  className: classes.listIcons
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_8__.default, {
+                  primary: "Today's Appointment"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_6__.default, {
+                component: _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.InertiaLink,
+                href: "/doctorAllAppointment",
                 button: true,
                 className: classes.nested,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.InertiaLink, {
-                  href: "/nurseTodayAppointment",
-                  className: "flex items-center w-full",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons__WEBPACK_IMPORTED_MODULE_13__.default, {
-                    className: classes.listIcons
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_8__.default, {
-                    primary: "Today's Appointment"
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_6__.default, {
-                button: true,
-                className: classes.nested,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.InertiaLink, {
-                  href: "/nurseAllAppointment",
-                  className: "flex items-center w-full",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons__WEBPACK_IMPORTED_MODULE_13__.default, {
-                    className: classes.listIcons
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_8__.default, {
-                    primary: "All Appointment"
-                  })]
-                })
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons__WEBPACK_IMPORTED_MODULE_13__.default, {
+                  className: classes.listIcons
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_8__.default, {
+                  primary: "All Appointment"
+                })]
               })]
             })
           })]
@@ -20263,6 +20247,1450 @@ var useStlyes = (0,_material_ui_core__WEBPACK_IMPORTED_MODULE_14__.default)({
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/AllAppointment.jsx":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/AllAppointment.jsx ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _DoctorLayout_DoctorLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../DoctorLayout/DoctorLayout */ "./resources/js/Pages/Doctors/DoctorLayout/DoctorLayout.jsx");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _OngoingAppointment_OngoingAppointment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OngoingAppointment/OngoingAppointment */ "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/OngoingAppointment.jsx");
+/* harmony import */ var _CompletedAppointment_CompletedAppointment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CompletedAppointment/CompletedAppointment */ "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/CompletedAppointment.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+function AllAppointment() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("ongoing"),
+      _useState2 = _slicedToArray(_useState, 2),
+      open = _useState2[0],
+      setOpen = _useState2[1];
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_DoctorLayout_DoctorLayout__WEBPACK_IMPORTED_MODULE_1__.default, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "header",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "header-text",
+          children: "Today's Appointment"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "space-x-3",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__.default, {
+          variant: open == "ongoing" ? "contained" : "outlined",
+          color: "primary",
+          onClick: function onClick() {
+            return setOpen("ongoing");
+          },
+          children: "Ongoing"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__.default, {
+          variant: open == "completed" ? "contained" : "outlined",
+          color: "primary",
+          onClick: function onClick() {
+            return setOpen("completed");
+          },
+          children: "Completed"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: open == "ongoing" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_OngoingAppointment_OngoingAppointment__WEBPACK_IMPORTED_MODULE_2__.default, {}) : open == "completed" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_CompletedAppointment_CompletedAppointment__WEBPACK_IMPORTED_MODULE_3__.default, {}) : null
+      })]
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AllAppointment);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/AppointmentInfo.jsx":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/AppointmentInfo.jsx ***!
+  \**************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Dialog */ "./node_modules/@material-ui/core/esm/Dialog/Dialog.js");
+/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/DialogActions */ "./node_modules/@material-ui/core/esm/DialogActions/DialogActions.js");
+/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "./node_modules/@material-ui/core/esm/DialogContent/DialogContent.js");
+/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "./node_modules/@material-ui/core/esm/DialogTitle/DialogTitle.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Close */ "./node_modules/@material-ui/icons/Close.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+
+
+
+
+function AppointmentInfo(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_2__.default, {
+      open: props.open == null ? false : true,
+      onClose: function onClose() {
+        return props.onClose(null);
+      },
+      "aria-labelledby": "alert-dialog-title",
+      "aria-describedby": "alert-dialog-description",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_3__.default, {
+        id: "alert-dialog-title",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "flex items-center justify-between",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            children: props.header
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+            "aria-label": "close",
+            onClick: function onClick() {
+              return props.onClose(null);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_5__.default, {})
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "grid grid-cols-1 gap-4 mt-4 md:grid-cols-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Name: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_name
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Patient ID: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_id
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Age: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_age
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Began at: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.created_at
+              })]
+            })]
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__.default, {
+          onClick: function onClick() {
+            return props.onClose(null);
+          },
+          color: "primary",
+          autoFocus: true,
+          children: "Close"
+        })
+      })]
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AppointmentInfo);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/CompletedAppointment.jsx":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/CompletedAppointment.jsx ***!
+  \*******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/makeStyles.js");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/esm/Paper/Paper.js");
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Table */ "./node_modules/@material-ui/core/esm/Table/Table.js");
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/TableBody */ "./node_modules/@material-ui/core/esm/TableBody/TableBody.js");
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/TableCell */ "./node_modules/@material-ui/core/esm/TableCell/TableCell.js");
+/* harmony import */ var _material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/TableContainer */ "./node_modules/@material-ui/core/esm/TableContainer/TableContainer.js");
+/* harmony import */ var _material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/TableHead */ "./node_modules/@material-ui/core/esm/TableHead/TableHead.js");
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TableRow */ "./node_modules/@material-ui/core/esm/TableRow/TableRow.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_js_pagination__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-js-pagination */ "./node_modules/react-js-pagination/dist/Pagination.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
+/* harmony import */ var _AppointmentInfo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AppointmentInfo */ "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/AppointmentInfo.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var columns = [{
+  id: 'name',
+  label: 'Name',
+  minWidth: 170
+}, {
+  id: 'patientId',
+  label: 'Patient ID',
+  minWidth: 100
+}, {
+  id: 'age',
+  label: 'Age',
+  minWidth: 170
+}, {
+  id: 'status',
+  label: 'Status',
+  minWidth: 170
+}];
+
+function CompletedAppointment() {
+  var _jsx2;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      completedData = _useState2[0],
+      setCompletedData = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      searchState = _useState4[0],
+      setSearchState = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      completedInfo = _useState6[0],
+      setCompletedInfo = _useState6[1];
+
+  var classes = useStyles();
+
+  function fetchData() {
+    var pageNumber = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorAllCompletedAppointment", {
+      params: {
+        page: pageNumber,
+        searchValue: searchState.length >= 4 ? searchState : ''
+      }
+    }).then(function (res) {
+      setCompletedData(res.data);
+    })["catch"](function (err) {
+      if (err.response) {
+        Object.keys(err.response.data.errors).forEach(function (key) {
+          alert("error: " + err.response.data.errors[key][0]);
+        });
+      }
+    });
+  }
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (searchState.length >= 4 || searchState.length == 0) {
+      fetchData();
+    }
+  }, [searchState]); // patient information
+
+  function getCompletedInfo(id) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorFetchAppointmentId", {
+      params: {
+        id: id
+      }
+    }).then(function (res) {
+      setCompletedInfo(res.data);
+    })["catch"](function (err) {
+      if (err.response) {
+        Object.keys(err.response.data.errors).forEach(function (key) {
+          alert("error: " + err.response.data.errors[key][0]);
+        });
+      }
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "flex items-center justify-between px-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+          className: "font-bold text-md",
+          children: "All Completed Appointments"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+        label: "Search",
+        id: "patientId",
+        placeholder: "Search (min 4 letters)" // className={classes.textField}
+        ,
+        helperText: "Some important text",
+        margin: "normal",
+        variant: "outlined",
+        onChange: function onChange(e) {
+          return setSearchState(e.target.value);
+        }
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__.default, {
+      className: classes.root,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_7__.default, {
+        className: classes.container,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_8__.default, {
+          stickyHeader: true,
+          "aria-label": "sticky table",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_9__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__.default, {
+              children: columns.map(function (column) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  align: column.align,
+                  style: {
+                    minWidth: column.minWidth
+                  },
+                  children: column.label
+                }, column.id);
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_12__.default, {
+            children: completedData && completedData.data.map(function (xyz, index) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__.default, {
+                hover: true,
+                role: "checkbox",
+                tabIndex: -1,
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                    className: "text-blue-500 cursor-pointer",
+                    onClick: function onClick() {
+                      return getCompletedInfo(xyz.id);
+                    },
+                    children: xyz.patient_name
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: xyz.patient_id
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: xyz.patient_age
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                    className: xyz.status == "completed" ? "text-green-500" : undefined,
+                    children: xyz.status
+                  })
+                })]
+              }, index);
+            })
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "flex justify-end p-2 mr-4 md:p-5",
+        children: completedData && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_js_pagination__WEBPACK_IMPORTED_MODULE_2__.default, (_jsx2 = {
+          activePage: completedData.current_page,
+          itemsCountPerPage: completedData.per_page,
+          totalItemsCount: completedData.total,
+          pageRangeDisplayed: 5,
+          onChange: function onChange(pageNumber) {
+            return fetchData(pageNumber);
+          }
+        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "flex text-blue-500"), _defineProperty(_jsx2, "itemClassPrev", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"), _defineProperty(_jsx2, "itemClassNext", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer ml-2"), _defineProperty(_jsx2, "itemClass", "px-4 py-1 border cursor-pointer"), _defineProperty(_jsx2, "itemClassLast", "ml-1 hidden md:inline-flex"), _defineProperty(_jsx2, "itemClassFirst", "mr-1 hidden md:inline-flex"), _defineProperty(_jsx2, "activeClass", "bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer"), _defineProperty(_jsx2, "firstPageText", "First"), _defineProperty(_jsx2, "lastPageText", "Last"), _jsx2))
+      }), completedInfo && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AppointmentInfo__WEBPACK_IMPORTED_MODULE_3__.default, {
+        open: completedInfo,
+        onClose: setCompletedInfo,
+        header: "Appointment Information"
+      })]
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CompletedAppointment);
+var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
+  root: {
+    width: '100%'
+  },
+  container: {
+    maxHeight: 440
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/AppointmentInfo.jsx":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/AppointmentInfo.jsx ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Dialog */ "./node_modules/@material-ui/core/esm/Dialog/Dialog.js");
+/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/DialogActions */ "./node_modules/@material-ui/core/esm/DialogActions/DialogActions.js");
+/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "./node_modules/@material-ui/core/esm/DialogContent/DialogContent.js");
+/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "./node_modules/@material-ui/core/esm/DialogTitle/DialogTitle.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Close */ "./node_modules/@material-ui/icons/Close.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+
+
+
+
+function AppointmentInfo(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_2__.default, {
+      open: props.open == null ? false : true,
+      onClose: function onClose() {
+        return props.onClose(null);
+      },
+      "aria-labelledby": "alert-dialog-title",
+      "aria-describedby": "alert-dialog-description",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_3__.default, {
+        id: "alert-dialog-title",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "flex items-center justify-between",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            children: props.header
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+            "aria-label": "close",
+            onClick: function onClick() {
+              return props.onClose(null);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_5__.default, {})
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "grid grid-cols-1 gap-4 mt-4 md:grid-cols-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Name: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_name
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Patient ID: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_id
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Age: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_age
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Began at: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.created_at
+              })]
+            })]
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__.default, {
+          onClick: function onClick() {
+            return props.onClose(null);
+          },
+          color: "primary",
+          autoFocus: true,
+          children: "Close"
+        })
+      })]
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AppointmentInfo);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/OngoingAppointment.jsx":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/OngoingAppointment.jsx ***!
+  \***************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/makeStyles.js");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/esm/Paper/Paper.js");
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Table */ "./node_modules/@material-ui/core/esm/Table/Table.js");
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/TableBody */ "./node_modules/@material-ui/core/esm/TableBody/TableBody.js");
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/TableCell */ "./node_modules/@material-ui/core/esm/TableCell/TableCell.js");
+/* harmony import */ var _material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/TableContainer */ "./node_modules/@material-ui/core/esm/TableContainer/TableContainer.js");
+/* harmony import */ var _material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/TableHead */ "./node_modules/@material-ui/core/esm/TableHead/TableHead.js");
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TableRow */ "./node_modules/@material-ui/core/esm/TableRow/TableRow.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_js_pagination__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-js-pagination */ "./node_modules/react-js-pagination/dist/Pagination.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
+/* harmony import */ var _AppointmentInfo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AppointmentInfo */ "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/AppointmentInfo.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var columns = [{
+  id: 'name',
+  label: 'Name',
+  minWidth: 170
+}, {
+  id: 'patientId',
+  label: 'Patient ID',
+  minWidth: 100
+}, {
+  id: 'age',
+  label: 'Age',
+  minWidth: 170
+}, {
+  id: 'status',
+  label: 'Status',
+  minWidth: 170
+}];
+
+function OngoingAppointment() {
+  var _jsx2;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      ongoingData = _useState2[0],
+      setOngoingData = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      searchState = _useState4[0],
+      setSearchState = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      ongoingInfo = _useState6[0],
+      setOngoingInfo = _useState6[1];
+
+  var classes = useStyles();
+
+  function fetchData() {
+    var pageNumber = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorAllOngoingAppointment", {
+      params: {
+        page: pageNumber,
+        searchValue: searchState.length >= 4 ? searchState : ''
+      }
+    }).then(function (res) {
+      setOngoingData(res.data);
+    })["catch"](function (err) {
+      if (err.response) {
+        Object.keys(err.response.data.errors).forEach(function (key) {
+          alert("error: " + err.response.data.errors[key][0]);
+        });
+      }
+    });
+  }
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (searchState.length >= 4 || searchState.length == 0) {
+      fetchData();
+    }
+  }, [searchState]); // patient information
+
+  function getOngoingInfo(id) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorFetchAppointmentId", {
+      params: {
+        id: id
+      }
+    }).then(function (res) {
+      setOngoingInfo(res.data);
+    })["catch"](function (err) {
+      if (err.response) {
+        Object.keys(err.response.data.errors).forEach(function (key) {
+          alert("error: " + err.response.data.errors[key][0]);
+        });
+      }
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "flex items-center justify-between px-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+          className: "font-bold text-md",
+          children: "All Ongoing Appointments"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+        label: "Search",
+        id: "patientId",
+        placeholder: "Search (min 4 letters)" // className={classes.textField}
+        ,
+        helperText: "Some important text",
+        margin: "normal",
+        variant: "outlined",
+        onChange: function onChange(e) {
+          return setSearchState(e.target.value);
+        }
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__.default, {
+      className: classes.root,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_7__.default, {
+        className: classes.container,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_8__.default, {
+          stickyHeader: true,
+          "aria-label": "sticky table",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_9__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__.default, {
+              children: columns.map(function (column) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  align: column.align,
+                  style: {
+                    minWidth: column.minWidth
+                  },
+                  children: column.label
+                }, column.id);
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_12__.default, {
+            children: ongoingData && ongoingData.data.map(function (xyz, index) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__.default, {
+                hover: true,
+                role: "checkbox",
+                tabIndex: -1,
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                    className: "text-blue-500 cursor-pointer",
+                    onClick: function onClick() {
+                      return getOngoingInfo(xyz.id);
+                    },
+                    children: xyz.patient_name
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: xyz.patient_id
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: xyz.patient_age
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                    className: xyz.status == "ongoing" ? "text-red-500" : undefined,
+                    children: xyz.status
+                  })
+                })]
+              }, index);
+            })
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "flex justify-end p-2 mr-4 md:p-5",
+        children: ongoingData && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_js_pagination__WEBPACK_IMPORTED_MODULE_2__.default, (_jsx2 = {
+          activePage: ongoingData.current_page,
+          itemsCountPerPage: ongoingData.per_page,
+          totalItemsCount: ongoingData.total,
+          pageRangeDisplayed: 5,
+          onChange: function onChange(pageNumber) {
+            return fetchData(pageNumber);
+          }
+        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "flex text-blue-500"), _defineProperty(_jsx2, "itemClassPrev", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"), _defineProperty(_jsx2, "itemClassNext", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer ml-2"), _defineProperty(_jsx2, "itemClass", "px-4 py-1 border cursor-pointer"), _defineProperty(_jsx2, "itemClassLast", "ml-1 hidden md:inline-flex"), _defineProperty(_jsx2, "itemClassFirst", "mr-1 hidden md:inline-flex"), _defineProperty(_jsx2, "activeClass", "bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer"), _defineProperty(_jsx2, "firstPageText", "First"), _defineProperty(_jsx2, "lastPageText", "Last"), _jsx2))
+      }), ongoingInfo && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AppointmentInfo__WEBPACK_IMPORTED_MODULE_3__.default, {
+        open: ongoingInfo,
+        onClose: setOngoingInfo,
+        header: "Appointment Information"
+      })]
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OngoingAppointment);
+var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
+  root: {
+    width: '100%'
+  },
+  container: {
+    maxHeight: 440
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/AppointmentInfo.jsx":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/AppointmentInfo.jsx ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Dialog */ "./node_modules/@material-ui/core/esm/Dialog/Dialog.js");
+/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/DialogActions */ "./node_modules/@material-ui/core/esm/DialogActions/DialogActions.js");
+/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "./node_modules/@material-ui/core/esm/DialogContent/DialogContent.js");
+/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "./node_modules/@material-ui/core/esm/DialogTitle/DialogTitle.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Close */ "./node_modules/@material-ui/icons/Close.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+
+
+
+
+function AppointmentInfo(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_2__.default, {
+      open: props.open == null ? false : true,
+      onClose: function onClose() {
+        return props.onClose(null);
+      },
+      "aria-labelledby": "alert-dialog-title",
+      "aria-describedby": "alert-dialog-description",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_3__.default, {
+        id: "alert-dialog-title",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "flex items-center justify-between",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            children: props.header
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+            "aria-label": "close",
+            onClick: function onClick() {
+              return props.onClose(null);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_5__.default, {})
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "grid grid-cols-1 gap-4 mt-4 md:grid-cols-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Name: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_name
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Patient ID: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_id
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Age: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_age
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Began at: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.created_at
+              })]
+            })]
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__.default, {
+          onClick: function onClick() {
+            return props.onClose(null);
+          },
+          color: "primary",
+          autoFocus: true,
+          children: "Close"
+        })
+      })]
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AppointmentInfo);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/CompletedAppointment.jsx":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/CompletedAppointment.jsx ***!
+  \*********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/makeStyles.js");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/esm/Paper/Paper.js");
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Table */ "./node_modules/@material-ui/core/esm/Table/Table.js");
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/TableBody */ "./node_modules/@material-ui/core/esm/TableBody/TableBody.js");
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/TableCell */ "./node_modules/@material-ui/core/esm/TableCell/TableCell.js");
+/* harmony import */ var _material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/TableContainer */ "./node_modules/@material-ui/core/esm/TableContainer/TableContainer.js");
+/* harmony import */ var _material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/TableHead */ "./node_modules/@material-ui/core/esm/TableHead/TableHead.js");
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TableRow */ "./node_modules/@material-ui/core/esm/TableRow/TableRow.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_js_pagination__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-js-pagination */ "./node_modules/react-js-pagination/dist/Pagination.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
+/* harmony import */ var _AppointmentInfo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AppointmentInfo */ "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/AppointmentInfo.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var columns = [{
+  id: 'name',
+  label: 'Name',
+  minWidth: 170
+}, {
+  id: 'patientId',
+  label: 'Patient ID',
+  minWidth: 100
+}, {
+  id: 'age',
+  label: 'Age',
+  minWidth: 170
+}, {
+  id: 'status',
+  label: 'Status',
+  minWidth: 170
+}];
+
+function CompletedAppointment() {
+  var _jsx2;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      completedData = _useState2[0],
+      setCompletedData = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      searchState = _useState4[0],
+      setSearchState = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      completedInfo = _useState6[0],
+      setCompletedInfo = _useState6[1];
+
+  var classes = useStyles();
+
+  function fetchCompletedData() {
+    var pageNumber = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorTodayCompletedAppointment", {
+      params: {
+        page: pageNumber,
+        searchValue: searchState.length >= 4 ? searchState : ''
+      }
+    }).then(function (res) {
+      setCompletedData(res.data);
+    })["catch"](function (err) {
+      if (err.response) {
+        Object.keys(err.response.data.errors).forEach(function (key) {
+          alert("error: " + err.response.data.errors[key][0]);
+        });
+      }
+    });
+  }
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (searchState.length >= 4 || searchState.length == 0) {
+      fetchCompletedData();
+    }
+  }, [searchState]); // patient information
+
+  function getCompletedInfo(id) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorFetchAppointmentId", {
+      params: {
+        id: id
+      }
+    }).then(function (res) {
+      setCompletedInfo(res.data);
+    })["catch"](function (err) {
+      if (err.response) {
+        Object.keys(err.response.data.errors).forEach(function (key) {
+          alert("error: " + err.response.data.errors[key][0]);
+        });
+      }
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "flex items-center justify-between px-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+          className: "font-bold text-md",
+          children: "Today's Completed Appointments"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+        label: "Search",
+        id: "patientId",
+        placeholder: "Search (min 4 letters)" // className={classes.textField}
+        ,
+        helperText: "Some important text",
+        margin: "normal",
+        variant: "outlined",
+        onChange: function onChange(e) {
+          return setSearchState(e.target.value);
+        }
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__.default, {
+      className: classes.root,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_7__.default, {
+        className: classes.container,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_8__.default, {
+          stickyHeader: true,
+          "aria-label": "sticky table",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_9__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__.default, {
+              children: columns.map(function (column) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  align: column.align,
+                  style: {
+                    minWidth: column.minWidth
+                  },
+                  children: column.label
+                }, column.id);
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_12__.default, {
+            children: completedData && completedData.data.map(function (xyz, index) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_10__.default, {
+                hover: true,
+                role: "checkbox",
+                tabIndex: -1,
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                    className: "text-blue-500 cursor-pointer",
+                    onClick: function onClick() {
+                      return getCompletedInfo(xyz.id);
+                    },
+                    children: xyz.patient_name
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: xyz.patient_id
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: xyz.patient_age
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_11__.default, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                    className: xyz.status == "completed" ? "text-green-500" : undefined,
+                    children: xyz.status
+                  })
+                })]
+              }, index);
+            })
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "flex justify-end p-2 mr-4 md:p-5",
+        children: completedData && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_js_pagination__WEBPACK_IMPORTED_MODULE_2__.default, (_jsx2 = {
+          activePage: completedData.current_page,
+          itemsCountPerPage: completedData.per_page,
+          totalItemsCount: completedData.total,
+          pageRangeDisplayed: 5,
+          onChange: function onChange(pageNumber) {
+            return fetchCompletedData(pageNumber);
+          }
+        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "flex text-blue-500"), _defineProperty(_jsx2, "itemClassPrev", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"), _defineProperty(_jsx2, "itemClassNext", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer ml-2"), _defineProperty(_jsx2, "itemClass", "px-4 py-1 border cursor-pointer"), _defineProperty(_jsx2, "itemClassLast", "ml-1 hidden md:inline-flex"), _defineProperty(_jsx2, "itemClassFirst", "mr-1 hidden md:inline-flex"), _defineProperty(_jsx2, "activeClass", "bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer"), _defineProperty(_jsx2, "firstPageText", "First"), _defineProperty(_jsx2, "lastPageText", "Last"), _jsx2))
+      }), completedInfo && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AppointmentInfo__WEBPACK_IMPORTED_MODULE_3__.default, {
+        open: completedInfo,
+        onClose: setCompletedInfo,
+        header: "Patient Information"
+      })]
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CompletedAppointment);
+var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
+  root: {
+    width: '100%'
+  },
+  container: {
+    maxHeight: 440
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/AppointmentInfo.jsx":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/AppointmentInfo.jsx ***!
+  \**************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Dialog */ "./node_modules/@material-ui/core/esm/Dialog/Dialog.js");
+/* harmony import */ var _material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/DialogActions */ "./node_modules/@material-ui/core/esm/DialogActions/DialogActions.js");
+/* harmony import */ var _material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/DialogContent */ "./node_modules/@material-ui/core/esm/DialogContent/DialogContent.js");
+/* harmony import */ var _material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/DialogTitle */ "./node_modules/@material-ui/core/esm/DialogTitle/DialogTitle.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Close */ "./node_modules/@material-ui/icons/Close.js");
+/* harmony import */ var _material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/IconButton */ "./node_modules/@material-ui/core/esm/IconButton/IconButton.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+
+
+
+
+function AppointmentInfo(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_2__.default, {
+      open: props.open == null ? false : true,
+      onClose: function onClose() {
+        return props.onClose(null);
+      },
+      "aria-labelledby": "alert-dialog-title",
+      "aria-describedby": "alert-dialog-description",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogTitle__WEBPACK_IMPORTED_MODULE_3__.default, {
+        id: "alert-dialog-title",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "flex items-center justify-between",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            children: props.header
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_4__.default, {
+            "aria-label": "close",
+            onClick: function onClick() {
+              return props.onClose(null);
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_5__.default, {})
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogContent__WEBPACK_IMPORTED_MODULE_6__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "grid grid-cols-1 gap-4 mt-4 md:grid-cols-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Name: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_name
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Patient ID: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_id
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Age: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.patient_age
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                className: "font-bold",
+                children: "Began at: "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: props.open.created_at
+              })]
+            })]
+          })
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_DialogActions__WEBPACK_IMPORTED_MODULE_7__.default, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__.default, {
+          onClick: function onClick() {
+            return props.onClose(null);
+          },
+          color: "primary",
+          autoFocus: true,
+          children: "Close"
+        })
+      })]
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AppointmentInfo);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/OngoingAppointment.jsx":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/OngoingAppointment.jsx ***!
+  \*****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/makeStyles.js");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/esm/Paper/Paper.js");
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/Table */ "./node_modules/@material-ui/core/esm/Table/Table.js");
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/TableBody */ "./node_modules/@material-ui/core/esm/TableBody/TableBody.js");
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core/TableCell */ "./node_modules/@material-ui/core/esm/TableCell/TableCell.js");
+/* harmony import */ var _material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/TableContainer */ "./node_modules/@material-ui/core/esm/TableContainer/TableContainer.js");
+/* harmony import */ var _material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/TableHead */ "./node_modules/@material-ui/core/esm/TableHead/TableHead.js");
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/TableRow */ "./node_modules/@material-ui/core/esm/TableRow/TableRow.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_js_pagination__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-js-pagination */ "./node_modules/react-js-pagination/dist/Pagination.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
+/* harmony import */ var _AppointmentInfo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AppointmentInfo */ "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/AppointmentInfo.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var columns = [{
+  id: 'name',
+  label: 'Name',
+  minWidth: 170
+}, {
+  id: 'patientId',
+  label: 'Patient ID',
+  minWidth: 100
+}, {
+  id: 'age',
+  label: 'Age',
+  minWidth: 170
+}, {
+  id: 'status',
+  label: 'Status',
+  minWidth: 170
+}];
+
+function OngoingAppointment() {
+  var _jsx2;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      ongoingData = _useState2[0],
+      setOngoingData = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      searchState = _useState4[0],
+      setSearchState = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      ongoingInfo = _useState6[0],
+      setOngoingInfo = _useState6[1];
+
+  var classes = useStyles();
+
+  function fetchOngoingData() {
+    var pageNumber = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorTodayOngoingAppointment", {
+      params: {
+        page: pageNumber,
+        searchValue: searchState.length >= 4 ? searchState : ''
+      }
+    }).then(function (res) {
+      setOngoingData(res.data);
+    })["catch"](function (err) {
+      if (err.response) {
+        Object.keys(err.response.data.errors).forEach(function (key) {
+          react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.error(err.response.data.errors[key][0]);
+        });
+      }
+    });
+  }
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (searchState.length >= 4 || searchState.length == 0) {
+      fetchOngoingData();
+    }
+  }, [searchState]); // patient information
+
+  function getOngoingInfo(id) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorFetchAppointmentId", {
+      params: {
+        id: id
+      }
+    }).then(function (res) {
+      setOngoingInfo(res.data);
+    })["catch"](function (err) {
+      if (err.response) {
+        Object.keys(err.response.data.errors).forEach(function (key) {
+          react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.error(err.response.data.errors[key][0]);
+        });
+      }
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "flex items-center justify-between px-2",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
+          className: "font-bold text-md",
+          children: "Today's Ongoing Appointments"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
+        label: "Search",
+        id: "patientId",
+        placeholder: "Search (min 4 letters)" // className={classes.textField}
+        ,
+        helperText: "Some important text",
+        margin: "normal",
+        variant: "outlined",
+        onChange: function onChange(e) {
+          return setSearchState(e.target.value);
+        }
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7__.default, {
+      className: classes.root,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_8__.default, {
+        className: classes.container,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_9__.default, {
+          stickyHeader: true,
+          "aria-label": "sticky table",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_10__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_11__.default, {
+              children: columns.map(function (column) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_12__.default, {
+                  align: column.align,
+                  style: {
+                    minWidth: column.minWidth
+                  },
+                  children: column.label
+                }, column.id);
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_13__.default, {
+            children: ongoingData && ongoingData.data.map(function (xyz, index) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_11__.default, {
+                hover: true,
+                role: "checkbox",
+                tabIndex: -1,
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_12__.default, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                    className: "text-blue-500 cursor-pointer",
+                    onClick: function onClick() {
+                      return getOngoingInfo(xyz.id);
+                    },
+                    children: xyz.patient_name
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_12__.default, {
+                  children: xyz.patient_id
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_12__.default, {
+                  children: xyz.patient_age
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_12__.default, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                    className: xyz.status == "ongoing" ? "text-red-500" : undefined,
+                    children: xyz.status
+                  })
+                })]
+              }, index);
+            })
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "flex justify-end p-2 mr-4 md:p-5",
+        children: ongoingData && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_js_pagination__WEBPACK_IMPORTED_MODULE_2__.default, (_jsx2 = {
+          activePage: ongoingData.current_page,
+          itemsCountPerPage: ongoingData.per_page,
+          totalItemsCount: ongoingData.total,
+          pageRangeDisplayed: 5,
+          onChange: function onChange(pageNumber) {
+            return fetchOngoingData(pageNumber);
+          }
+        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "flex text-blue-500"), _defineProperty(_jsx2, "itemClassPrev", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"), _defineProperty(_jsx2, "itemClassNext", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer ml-2"), _defineProperty(_jsx2, "itemClass", "px-4 py-1 border cursor-pointer"), _defineProperty(_jsx2, "itemClassLast", "ml-1 hidden md:inline-flex"), _defineProperty(_jsx2, "itemClassFirst", "mr-1 hidden md:inline-flex"), _defineProperty(_jsx2, "activeClass", "bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer"), _defineProperty(_jsx2, "firstPageText", "First"), _defineProperty(_jsx2, "lastPageText", "Last"), _jsx2))
+      }), ongoingInfo && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AppointmentInfo__WEBPACK_IMPORTED_MODULE_3__.default, {
+        open: ongoingInfo,
+        onClose: setOngoingInfo,
+        header: "Patient Information"
+      })]
+    })]
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OngoingAppointment);
+var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_14__.default)({
+  root: {
+    width: '100%'
+  },
+  container: {
+    maxHeight: 440
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/TodayAppointment.jsx":
 /*!********************************************************************************************!*\
   !*** ./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/TodayAppointment.jsx ***!
@@ -20275,12 +21703,67 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _DoctorLayout_DoctorLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../DoctorLayout/DoctorLayout */ "./resources/js/Pages/Doctors/DoctorLayout/DoctorLayout.jsx");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _OngoingAppointment_OngoingAppointment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OngoingAppointment/OngoingAppointment */ "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/OngoingAppointment.jsx");
+/* harmony import */ var _CompletedAppointment_CompletedAppointment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CompletedAppointment/CompletedAppointment */ "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/CompletedAppointment.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
 
 
 
 function TodayAppointment() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {});
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("ongoing"),
+      _useState2 = _slicedToArray(_useState, 2),
+      open = _useState2[0],
+      setOpen = _useState2[1];
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_DoctorLayout_DoctorLayout__WEBPACK_IMPORTED_MODULE_1__.default, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "header",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "header-text",
+          children: "Today's Appointment"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "space-x-3",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__.default, {
+          variant: open == "ongoing" ? "contained" : "outlined",
+          color: "primary",
+          onClick: function onClick() {
+            return setOpen("ongoing");
+          },
+          children: "Ongoing"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__.default, {
+          variant: open == "completed" ? "contained" : "outlined",
+          color: "primary",
+          onClick: function onClick() {
+            return setOpen("completed");
+          },
+          children: "Completed"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: open == "ongoing" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_OngoingAppointment_OngoingAppointment__WEBPACK_IMPORTED_MODULE_2__.default, {}) : open == "completed" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_CompletedAppointment_CompletedAppointment__WEBPACK_IMPORTED_MODULE_3__.default, {}) : null
+      })]
+    })
+  });
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TodayAppointment);
@@ -21065,9 +22548,9 @@ function AddAppointmentModal(props) {
   function handleFormSubmit(e) {
     e.preventDefault();
     axios__WEBPACK_IMPORTED_MODULE_2___default().post('/nurseAddAppointmentSubmit', addAppointmentForm).then(function () {
-      alert("Appointment Submitted");
       props.onClose(null);
       clearAppointmentForm();
+      react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.success("appointment submitted");
     })["catch"](function (err) {
       if (err.response) {
         Object.keys(err.response.data.errors).forEach(function (key) {
@@ -22320,7 +23803,7 @@ var columns = [{
   minWidth: 170
 }];
 
-function Index() {
+function CompletedTodayAppointment() {
   var _jsx2;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
@@ -22342,7 +23825,7 @@ function Index() {
 
   function fetchCompletedData() {
     var pageNumber = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-    axios__WEBPACK_IMPORTED_MODULE_1___default().get("nurseCompletedTodayAppointment", {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("nurseTodayCompletedAppointment", {
       params: {
         page: pageNumber,
         searchValue: searchState.length >= 4 ? searchState : ''
@@ -22467,7 +23950,7 @@ function Index() {
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CompletedTodayAppointment);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
   root: {
     width: '100%'
@@ -22740,7 +24223,7 @@ var columns = [{
   minWidth: 170
 }];
 
-function Index() {
+function OngoingTodayAppointment() {
   var _jsx2;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
@@ -22785,7 +24268,7 @@ function Index() {
   }, [searchState]); // patient information
 
   function getOngoingInfo(id) {
-    axios__WEBPACK_IMPORTED_MODULE_1___default().get("nurseOngoingCompletedInfo", {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("nurseTodayOngoingInfo", {
       params: {
         id: id
       }
@@ -22887,7 +24370,7 @@ function Index() {
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Index);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OngoingTodayAppointment);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
   root: {
     width: '100%'
@@ -23682,8 +25165,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 /**
  *  I use this page to design components before adding it to my app
@@ -23693,53 +25178,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Test() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Button, {
-      type: "outlined",
-      children: "I am button"
-    })
-  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {});
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Test);
 
 function Error404() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: "flex flex-col items-center",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
       className: "text-6xl font-semibold text-gray-700 dark:text-gray-200",
       children: "404"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
       className: "text-gray-700 dark:text-gray-300",
-      children: ["Page not found. Check the address or", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+      children: ["Page not found. Check the address or", ' ', /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
         className: "text-purple-600 hover:underline dark:text-purple-300",
         href: "../index.html",
         children: "go back"
       }), "."]
     })]
-  });
-}
-
-function Button(props) {
-  function type() {
-    return props.type == 'secondary' ? secondary() : props.type == 'outlined' ? outlined() : primary();
-  }
-
-  function primary() {
-    return "flex items-center px-1 py-1 text-white bg-indigo-500 rounded hover:bg-indigo-400";
-  }
-
-  function secondary() {
-    return "flex items-center px-1 py-1 text-white bg-red-500 rounded hover:bg-red-400";
-  }
-
-  function outlined() {
-    return "flex items-center px-1 py-1 text-black bg-transparent rounded hover:bg-gray-400 border border-black";
-  }
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
-    className: type(),
-    children: props.children
   });
 }
 
@@ -86844,6 +88301,24 @@ var map = {
 	"./Doctors/DoctorLayout/DoctorLayout.jsx": "./resources/js/Pages/Doctors/DoctorLayout/DoctorLayout.jsx",
 	"./Doctors/DoctorLayout/DoctorSidebar": "./resources/js/Pages/Doctors/DoctorLayout/DoctorSidebar.jsx",
 	"./Doctors/DoctorLayout/DoctorSidebar.jsx": "./resources/js/Pages/Doctors/DoctorLayout/DoctorSidebar.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/AllAppointment": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/AllAppointment.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/AllAppointment.jsx": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/AllAppointment.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/CompletedAppointment/AppointmentInfo": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/AppointmentInfo.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/CompletedAppointment/AppointmentInfo.jsx": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/AppointmentInfo.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/CompletedAppointment/CompletedAppointment": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/CompletedAppointment.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/CompletedAppointment/CompletedAppointment.jsx": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/CompletedAppointment/CompletedAppointment.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/OngoingAppointment/AppointmentInfo": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/AppointmentInfo.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/OngoingAppointment/AppointmentInfo.jsx": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/AppointmentInfo.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/OngoingAppointment/OngoingAppointment": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/OngoingAppointment.jsx",
+	"./Doctors/doctorAppointment/AllAppointment/OngoingAppointment/OngoingAppointment.jsx": "./resources/js/Pages/Doctors/doctorAppointment/AllAppointment/OngoingAppointment/OngoingAppointment.jsx",
+	"./Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/AppointmentInfo": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/AppointmentInfo.jsx",
+	"./Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/AppointmentInfo.jsx": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/AppointmentInfo.jsx",
+	"./Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/CompletedAppointment": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/CompletedAppointment.jsx",
+	"./Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/CompletedAppointment.jsx": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/CompletedAppointment/CompletedAppointment.jsx",
+	"./Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/AppointmentInfo": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/AppointmentInfo.jsx",
+	"./Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/AppointmentInfo.jsx": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/AppointmentInfo.jsx",
+	"./Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/OngoingAppointment": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/OngoingAppointment.jsx",
+	"./Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/OngoingAppointment.jsx": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/OngoingAppointment/OngoingAppointment.jsx",
 	"./Doctors/doctorAppointment/TodayAppointment/TodayAppointment": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/TodayAppointment.jsx",
 	"./Doctors/doctorAppointment/TodayAppointment/TodayAppointment.jsx": "./resources/js/Pages/Doctors/doctorAppointment/TodayAppointment/TodayAppointment.jsx",
 	"./Home": "./resources/js/Pages/Home.js",

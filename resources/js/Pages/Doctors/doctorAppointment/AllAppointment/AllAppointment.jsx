@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import OngoingAppointment from './OngoingAppointment/OngoingAppointment'
 import CompletedAppointment from './CompletedAppointment/CompletedAppointment'
 
-function TodayAppointment() {
+function AllAppointment() {
   const [open, setOpen] = useState("ongoing");
   return (
     <div>
@@ -37,4 +37,4 @@ function TodayAppointment() {
   )
 }
 
-export default TodayAppointment
+export default AllAppointment

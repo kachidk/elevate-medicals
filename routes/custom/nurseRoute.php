@@ -21,9 +21,9 @@ Route::post('/nurseAddAppointmentSubmit', [NurseAppointmentController::class, 'a
 Route::get('/nurseTodayAppointment', [NurseAppointmentController::class, 'todayAppointmentIndex']);
 // appointment today ongoing
 Route::get('nurseOngoingTodayAppointment', [NurseAppointmentController::class, 'ongoingTodayAppointmentIndex']);
-Route::get('nurseOngoingCompletedInfo', [NurseAppointmentController::class, 'viewTodayOngoingData']);
+Route::get('nurseTodayOngoingInfo', [NurseAppointmentController::class, 'viewTodayOngoingData']);
 // appointment today completed
-Route::get('nurseCompletedTodayAppointment', [NurseAppointmentController::class, 'completedTodayAppointmentIndex']);
+Route::get('nurseTodayCompletedAppointment', [NurseAppointmentController::class, 'completedTodayAppointmentIndex']);
 Route::get('nurseTodayCompletedInfo', [NurseAppointmentController::class, 'viewTodayCompletedData']);
 // appointment all
 Route::get('/nurseAllAppointment', [NurseAppointmentController::class, 'allAppointmentIndex']);

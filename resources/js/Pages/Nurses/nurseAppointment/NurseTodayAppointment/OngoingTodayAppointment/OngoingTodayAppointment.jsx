@@ -36,7 +36,7 @@ const columns = [
 ];
 
 
-function Index() {
+function OngoingTodayAppointment() {
   const [ongoingData, setOngoingData] = useState(null);
   const [searchState, setSearchState] = useState('');
   const [ongoingInfo, setOngoingInfo] = useState(null);
@@ -69,7 +69,7 @@ function Index() {
 
   // patient information
   function getOngoingInfo(id) {
-    axios.get("nurseOngoingCompletedInfo",{
+    axios.get("nurseTodayOngoingInfo",{
       params: {
         id: id,
       }
@@ -191,7 +191,7 @@ function Index() {
   )
 }
 
-export default Index
+export default OngoingTodayAppointment
 
 const useStyles = makeStyles({
   root: {

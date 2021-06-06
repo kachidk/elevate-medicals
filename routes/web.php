@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\publicControllers\profileController;
+use App\Http\Controllers\shared\profileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 use Inertia\Inertia;
@@ -52,5 +52,5 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['middleware' => 'role:lab'], function() {
         require 'custom/labRoute.php';
     });
-
+    require 'api/global.php';
 });

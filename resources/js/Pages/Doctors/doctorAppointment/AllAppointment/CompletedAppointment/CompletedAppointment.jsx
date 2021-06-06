@@ -10,7 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import axios from 'axios';
 import Pagination from "react-js-pagination";
 import TextField from "@material-ui/core/TextField";
-import CompletedTodayInfo from './CompletedTodayInfo';
+import AppointmentInfo from './AppointmentInfo';
 
 const columns = [
   { id: 'name',
@@ -33,15 +33,15 @@ const columns = [
   },
 ];
 
-function CompletedTodayAppointment() {
+function CompletedAppointment() {
   const [completedData, setCompletedData] = useState(null);
   const [searchState, setSearchState] = useState('');
-  const [completedInfo, setCompletedInfo] = useState(null)
+  const [completedInfo, setCompletedInfo] = useState(null);
 
   const classes = useStyles();
 
-  function fetchCompletedData(pageNumber = 1) {
-    axios.get("nurseTodayCompletedAppointment",{
+  function fetchData(pageNumber = 1) {
+    axios.get("doctorAllCompletedAppointment",{
         params: {
           page: pageNumber,
           searchValue: searchState.length >= 4 ? searchState : '',
@@ -60,13 +60,13 @@ function CompletedTodayAppointment() {
 
   useEffect(() => {
     if(searchState.length >= 4 || searchState.length == 0){
-      fetchCompletedData()
+      fetchData()
     }
   }, [searchState])
 
   // patient information
   function getCompletedInfo(id) {
-    axios.get("nurseTodayCompletedInfo",{
+    axios.get("doctorFetchAppointmentId",{
       params: {
         id: id,
       }
@@ -82,12 +82,12 @@ function CompletedTodayAppointment() {
     })
   }
   return (
-    <>
-       {/* search */}
-       <div className="flex items-center justify-between px-2">
+    <div>
+         {/* search */}
+      <div className="flex items-center justify-between px-2">
          <div>
             <h1 className="font-bold text-md">
-             Today's Completed Appointments
+             All Completed Appointments
             </h1>
          </div>
           <TextField
@@ -159,7 +159,7 @@ function CompletedTodayAppointment() {
                 itemsCountPerPage={completedData.per_page}
                 totalItemsCount={completedData.total}
                 pageRangeDisplayed={5}
-                onChange={(pageNumber)=> fetchCompletedData(pageNumber)}
+                onChange={(pageNumber)=> fetchData(pageNumber)}
                 pageRangeDisplayed={screen.width < 768 ? 3 : 5}
                 innerClass="flex text-blue-500"
                 itemClassPrev="px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"
@@ -177,19 +177,19 @@ function CompletedTodayAppointment() {
 
           {
             completedInfo &&
-            <CompletedTodayInfo
+            <AppointmentInfo
               open={completedInfo}
               onClose={setCompletedInfo}
-              header="Patient Information"
+              header="Appointment Information"
             />
           }
         </Paper>
         {/* ! table */}
-    </>
+    </div>
   )
 }
 
-export default CompletedTodayAppointment
+export default CompletedAppointment
 
 const useStyles = makeStyles({
   root: {

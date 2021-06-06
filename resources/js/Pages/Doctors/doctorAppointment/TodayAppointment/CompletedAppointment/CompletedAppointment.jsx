@@ -10,7 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import axios from 'axios';
 import Pagination from "react-js-pagination";
 import TextField from "@material-ui/core/TextField";
-import CompletedTodayInfo from './CompletedTodayInfo';
+import AppointmentInfo from './AppointmentInfo';
 
 const columns = [
   { id: 'name',
@@ -32,8 +32,7 @@ const columns = [
     minWidth: 170,
   },
 ];
-
-function CompletedTodayAppointment() {
+function CompletedAppointment() {
   const [completedData, setCompletedData] = useState(null);
   const [searchState, setSearchState] = useState('');
   const [completedInfo, setCompletedInfo] = useState(null)
@@ -41,7 +40,7 @@ function CompletedTodayAppointment() {
   const classes = useStyles();
 
   function fetchCompletedData(pageNumber = 1) {
-    axios.get("nurseTodayCompletedAppointment",{
+    axios.get("doctorTodayCompletedAppointment",{
         params: {
           page: pageNumber,
           searchValue: searchState.length >= 4 ? searchState : '',
@@ -66,7 +65,7 @@ function CompletedTodayAppointment() {
 
   // patient information
   function getCompletedInfo(id) {
-    axios.get("nurseTodayCompletedInfo",{
+    axios.get("doctorFetchAppointmentId",{
       params: {
         id: id,
       }
@@ -177,7 +176,7 @@ function CompletedTodayAppointment() {
 
           {
             completedInfo &&
-            <CompletedTodayInfo
+            <AppointmentInfo
               open={completedInfo}
               onClose={setCompletedInfo}
               header="Patient Information"
@@ -189,7 +188,7 @@ function CompletedTodayAppointment() {
   )
 }
 
-export default CompletedTodayAppointment
+export default CompletedAppointment
 
 const useStyles = makeStyles({
   root: {

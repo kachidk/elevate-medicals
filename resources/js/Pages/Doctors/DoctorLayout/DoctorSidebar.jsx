@@ -103,28 +103,14 @@ function DoctorSidebar({ sidebarOpen, setSidebarOpen }) {
           </ListItem>
           <Collapse in={appointmentDropdown} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                {/* add appointment */}
-                <ListItem button className={classes.nested}>
-                  <InertiaLink href="/nurseAddAppointment" className="flex items-center w-full">
-                    <Remove className={classes.listIcons}/>
-                    <ListItemText primary="Add Appointment" />
-                  </InertiaLink>
-                </ListItem>
-
                 {/* today appointment */}
-                <ListItem button className={classes.nested}>
-                  <InertiaLink href="/nurseTodayAppointment" className="flex items-center w-full">
+                <ListItem component={InertiaLink} href="/doctorTodayAppointment" button className={classes.nested}>
                     <Remove className={classes.listIcons}/>
-                    <ListItemText primary="Today's Appointment" />
-                  </InertiaLink>
+                    <ListItemText primary="Today's Appointment"/>
                 </ListItem>
-
-                {/* all appointment */}
-                <ListItem button className={classes.nested}>
-                  <InertiaLink href="/nurseAllAppointment" className="flex items-center w-full">
+                <ListItem component={InertiaLink} href="/doctorAllAppointment" button className={classes.nested}>
                     <Remove className={classes.listIcons}/>
-                    <ListItemText primary="All Appointment" />
-                  </InertiaLink>
+                    <ListItemText primary="All Appointment"/>
                 </ListItem>
               </List>
           </Collapse>
