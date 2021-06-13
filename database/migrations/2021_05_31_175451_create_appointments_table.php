@@ -32,6 +32,9 @@ class CreateAppointmentsTable extends Migration
             $table->string('doctor_test_status')->nullable();
             $table->string('doctor_test_description')->nullable();
             $table->string('doctor_prescription')->nullable();
+            $table->string('lab_test_status')->nullable();
+            $table->string('lab_test_result')->nullable();
+            $table->string('lab_staff_name')->nullable();
             $table->timestamps();
         });
     }

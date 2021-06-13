@@ -139,8 +139,8 @@ function OngoingAppointment() {
                          {xyz.patient_age}
                        </TableCell>
                        <TableCell>
-                         <span className={xyz.status == "ongoing" ? "text-red-500" : undefined}>
-                           {xyz.status}
+                         <span className={xyz.lab_test_status == "ongoing" ? "text-red-500" : undefined}>
+                           {xyz.lab_test_status}
                          </span>
                        </TableCell>
                  </TableRow>

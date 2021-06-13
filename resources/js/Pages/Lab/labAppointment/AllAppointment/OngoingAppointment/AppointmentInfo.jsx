@@ -15,7 +15,6 @@ import { usePage } from '@inertiajs/inertia-react';
 
 
 function AppointmentInfo(props) {
-
   const authUser = usePage().props.user
 
   const classes = useStyles();
@@ -32,12 +31,12 @@ function AppointmentInfo(props) {
   }
   function handleFormSubmit(e) {
     e.preventDefault()
-    axios.post('labTodayOngoingResultSubmit', form)
+    axios.post('labAllOngoingResultSubmit', form)
       .then(()=>{
         props.onClose(null)
         toast.success("Test Result Saved")
       }).then(()=>{
-        props.fetchOngoingData()
+        props.fetchData()
       }).catch((err)=>{
         if(err.response){
           Object.keys(err.response.data.errors).forEach(key=>{

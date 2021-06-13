@@ -123,25 +123,25 @@ function CompletedAppointment() {
                 { completedData &&
                   completedData.data.map((xyz, index)=>(
                     <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-                          <TableCell>
-                            <span
-                              className="text-blue-500 cursor-pointer"
-                              onClick={()=>getCompletedInfo(xyz.id)}
-                            >
-                              {xyz.patient_name}
-                            </span>
-                          </TableCell>
-                          <TableCell>
-                            {xyz.patient_id}
-                          </TableCell>
-                          <TableCell>
-                            {xyz.patient_age}
-                          </TableCell>
-                          <TableCell>
-                            <span className={xyz.status == "completed" ? "text-green-500" : undefined}>
-                              {xyz.status}
-                            </span>
-                          </TableCell>
+                      <TableCell>
+                        <span
+                          className="text-blue-500 cursor-pointer"
+                          onClick={()=>getCompletedInfo(xyz.id)}
+                        >
+                          {xyz.patient_name}
+                        </span>
+                      </TableCell>
+                      <TableCell>
+                        {xyz.patient_id}
+                      </TableCell>
+                      <TableCell>
+                        {xyz.patient_age}
+                      </TableCell>
+                      <TableCell>
+                        <span className={xyz.lab_test_status == "completed" ? "text-green-500" : undefined}>
+                          {xyz.lab_test_status}
+                        </span>
+                      </TableCell>
                     </TableRow>
                   ))
                 }

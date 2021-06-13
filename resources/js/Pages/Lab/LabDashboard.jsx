@@ -169,6 +169,7 @@ function LabDashboard() {
             label="Search"
             id="patientId"
             placeholder="Search (min 4 letters)"
+            helperText="Please input at least 4 characters"
             margin="normal"
             variant="outlined"
             onChange={(e)=>setSearchState(e.target.value)}

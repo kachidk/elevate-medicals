@@ -115,7 +115,7 @@ function LabSidebar({ sidebarOpen, setSidebarOpen }) {
 
                 {/* all appointment */}
                 <ListItem button className={classes.nested}>
-                  <InertiaLink href="/nurseAllAppointment" className="flex items-center w-full">
+                  <InertiaLink href="/labAllAppointment" className="flex items-center w-full">
                     <Remove className={classes.listIcons}/>
                     <ListItemText primary="All Appointment" />
                   </InertiaLink>

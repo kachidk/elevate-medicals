@@ -27,5 +27,8 @@ class Appointment extends Model
         'doctor_test_status',
         'doctor_test_description',
         'doctor_prescription',
+        'lab_test_status',
+        'lab_test_result',
+        'lab_staff_name'
     ];
 }

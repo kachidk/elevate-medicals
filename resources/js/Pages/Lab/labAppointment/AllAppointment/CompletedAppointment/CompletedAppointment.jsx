@@ -36,18 +36,17 @@ const columns = [
 function CompletedAppointment() {
   const [completedData, setCompletedData] = useState(null);
   const [searchState, setSearchState] = useState('');
-  const [completedInfo, setCompletedInfo] = useState(null);
+  const [completedInfo, setCompletedInfo] = useState(null)
 
   const classes = useStyles();
 
-  function fetchData(pageNumber = 1) {
-    axios.get("doctorAllCompletedAppointment",{
+  function fetchCompletedData(pageNumber = 1) {
+    axios.get("labAllCompletedAppointment",{
         params: {
           page: pageNumber,
           searchValue: searchState.length >= 4 ? searchState : '',
         }
-    })
-      .then((res)=>{
+    }).then((res)=>{
         setCompletedData(res.data)
       }).catch((err)=>{
         if(err.response){
@@ -60,18 +59,17 @@ function CompletedAppointment() {
 
   useEffect(() => {
     if(searchState.length >= 4 || searchState.length == 0){
-      fetchData()
+      fetchCompletedData()
     }
   }, [searchState])
 
   // patient information
   function getCompletedInfo(id) {
-    axios.get("doctorFetchAppointmentId",{
+    axios.get("labFetchAppointmentId",{
       params: {
         id: id,
       }
-  })
-    .then((res)=>{
+  }).then((res)=>{
       setCompletedInfo(res.data)
     }).catch((err)=>{
       if(err.response){
@@ -82,20 +80,20 @@ function CompletedAppointment() {
     })
   }
   return (
-    <div>
-         {/* search */}
-      <div className="flex items-center justify-between px-2">
+    <>
+       {/* search */}
+       <div className="flex items-center justify-between px-2">
          <div>
             <h1 className="font-bold text-md">
-             All Completed Appointments
+             Today's Completed Appointments
             </h1>
          </div>
           <TextField
             label="Search"
             id="patientId"
             placeholder="Search (min 4 letters)"
-           // className={classes.textField}
-            helperText="Some important text"
+            helperText={searchState.length < 4 && searchState != '' ? 'Please input at least 4 characters' : ''}
+            error={searchState.length < 4 && searchState != '' ? true : false}
             margin="normal"
             variant="outlined"
             onChange={(e)=>setSearchState(e.target.value)}
@@ -124,25 +122,25 @@ function CompletedAppointment() {
                 { completedData &&
                   completedData.data.map((xyz, index)=>(
                     <TableRow hover role="checkbox" tabIndex={-1} key={index}>
-                          <TableCell>
-                            <span
-                              className="text-blue-500 cursor-pointer"
-                              onClick={()=>getCompletedInfo(xyz.id)}
-                            >
-                              {xyz.patient_name}
-                            </span>
-                          </TableCell>
-                          <TableCell>
-                            {xyz.patient_id}
-                          </TableCell>
-                          <TableCell>
-                            {xyz.patient_age}
-                          </TableCell>
-                          <TableCell>
-                            <span className={xyz.status == "completed" ? "text-green-500" : undefined}>
-                              {xyz.status}
-                            </span>
-                          </TableCell>
+                      <TableCell>
+                        <span
+                          className="text-blue-500 cursor-pointer"
+                          onClick={()=>getCompletedInfo(xyz.id)}
+                        >
+                          {xyz.patient_name}
+                        </span>
+                      </TableCell>
+                      <TableCell>
+                        {xyz.patient_id}
+                      </TableCell>
+                      <TableCell>
+                        {xyz.patient_age}
+                      </TableCell>
+                      <TableCell>
+                        <span className={xyz.lab_test_status == "completed" ? "text-green-500" : undefined}>
+                          {xyz.lab_test_status}
+                        </span>
+                      </TableCell>
                     </TableRow>
                   ))
                 }
@@ -159,7 +157,7 @@ function CompletedAppointment() {
                 itemsCountPerPage={completedData.per_page}
                 totalItemsCount={completedData.total}
                 pageRangeDisplayed={5}
-                onChange={(pageNumber)=> fetchData(pageNumber)}
+                onChange={(pageNumber)=> fetchCompletedData(pageNumber)}
                 pageRangeDisplayed={screen.width < 768 ? 3 : 5}
                 innerClass="inline-flex items-center text-gray-700"
                 itemClassPrev="mr-2"
@@ -177,12 +175,13 @@ function CompletedAppointment() {
             <AppointmentInfo
               open={completedInfo}
               onClose={setCompletedInfo}
-              header="Appointment Information"
+              fetchCompletedData={fetchCompletedData}
+              header="Patient Information"
             />
           }
         </Paper>
         {/* ! table */}
-    </div>
+    </>
   )
 }
 

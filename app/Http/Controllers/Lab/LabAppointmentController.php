@@ -19,11 +19,11 @@ class LabAppointmentController extends Controller
     {
         $appointment = Appointment::query();
         $appointment->whereDate('created_at', Carbon::today())
-        ->where('doctor_admission_status', 1);
+        ->where('lab_test_status', 'ongoing');
 
         if (request('searchValue')) {
             $appointment->whereDate('created_at', Carbon::today())
-            ->where('doctor_admission_status', 1)
+            ->where('lab_test_status', 'ongoing')
             ->where(function($q){
                 return $q
                 ->orWhere('patient_name', 'LIKE', '%' . request('searchValue') . '%')
@@ -36,11 +36,11 @@ class LabAppointmentController extends Controller
     {
         $appointment = Appointment::query();
         $appointment->whereDate('created_at', Carbon::today())
-        ->where('doctor_admission_status', 0);
+        ->where('lab_test_status', 'completed');
 
         if (request('searchValue')) {
             $appointment->whereDate('created_at', Carbon::today())
-            ->where('doctor_admission_status', 0)
+            ->where('lab_test_status', 'completed')
             ->where(function($q){
                 return $q
                 ->orWhere('patient_name', 'LIKE', '%' . request('searchValue') . '%')
@@ -56,6 +56,65 @@ class LabAppointmentController extends Controller
         $info = Appointment::find(request('id'));
         return response($info);
     }
+    public function ongoingTodayResultSubmit(Request $req)
+    {
+        $validate = $req->validate([
+            'testResult' => 'required'
+        ]);
+        if($validate){
+            $appointment = Appointment::find($req->id);
+            $appointment->lab_test_result = $req->testResult;
+            $appointment->lab_test_status = 'completed';
+            $appointment->lab_staff_name = $req->staffName;
+            $appointment->update();
+        }
+    }
+    public function allAppointmentIndex()
+    {
+        return inertia('Lab/labAppointment/AllAppointment/AllAppointment');
+    }
+    public function ongoingAllAppointment()
+    {
+        $appointment = Appointment::query();
+        $appointment->where('lab_test_status', 'ongoing');
 
+        if (request('searchValue')) {
+            $appointment->where('lab_test_status', 'ongoing')
+                ->where(function($q){
+                    return $q
+                    ->orWhere('patient_name', 'LIKE', '%' . request('searchValue') . '%')
+                    ->orWhere('patient_id', 'LIKE', '%' . request('searchValue') . '%');
+                });
+        }
+        return response($appointment->orderBy('created_at', 'ASC')->paginate(10));
+    }
+    public function ongoingAllResultSubmit(Request $req)
+    {
+        $validate = $req->validate([
+            'testResult' => 'required'
+        ]);
+        if($validate){
+            $appointment = Appointment::find($req->id);
+            $appointment->lab_test_result = $req->testResult;
+            $appointment->lab_test_status = 'completed';
+            $appointment->lab_staff_name = $req->staffName;
+            $appointment->update();
+        }
+    }
+    public function completedAllAppointment()
+    {
+        $appointment = Appointment::query();
+        $appointment->where('lab_test_status', 'completed');
+
+        if (request('searchValue')) {
+            $appointment->where('lab_test_status', 'completed')
+            ->where(function($q){
+                return $q
+                ->orWhere('patient_name', 'LIKE', '%' . request('searchValue') . '%')
+                ->orWhere('patient_id', 'LIKE', '%' . request('searchValue') . '%');
+            });
+        }
+        return response($appointment->orderBy('created_at', 'ASC')->paginate(10));
+    }
 
 }

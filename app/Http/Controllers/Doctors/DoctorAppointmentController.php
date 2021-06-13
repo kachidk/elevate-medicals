@@ -113,7 +113,7 @@ class DoctorAppointmentController extends Controller
             'patientComplain' => 'required',
             'diagnosis' => 'required',
             'prescription' => 'required',
-            'labTest' => 'required',
+            'labTest' => 'required, boolean',
             'admit' => 'required'
         ]);
         $appointment = Appointment::find($req->appointmentId);
@@ -126,6 +126,9 @@ class DoctorAppointmentController extends Controller
         $appointment->doctor_admission_status = $req->admit;
         $appointment->status = $req->appointmentStatus;
         $appointment->doctor_test_description = $req->labTestDescription;
+        if($req->labTest){
+            $appointment->lab_test_status = 'ongoing';
+        }
         $appointment->update();
 
         return redirect()->back();

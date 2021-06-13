@@ -16,25 +16,22 @@ class LabController extends Controller
     public function ongoingTodayCount()
     {
         $appointment = Appointment::query();
-        $appointment->where('status', 'ongoing');
         $appointment->whereDate('created_at', Carbon::today());
-        $appointment->where('doctor_admission_status', 1);
+        $appointment->where('lab_test_status', 'ongoing');
         return response($appointment->count());
     }
 
     public function completedTodayCount()
     {
         $appointment = Appointment::query();
-        $appointment->where('status', 'completed');
         $appointment->whereDate('created_at', Carbon::today());
-        $appointment->where('doctor_admission_status', 1);
+        $appointment->where('lab_test_status', 'completed');
         return response($appointment->count());
     }
     public function allOngoingTodayCount()
     {
         $appointment = Appointment::query();
-        $appointment->where('status', 'ongoing');
-        $appointment->where('doctor_admission_status', 1);
+        $appointment->where('lab_test_status', 'ongoing');
         return response($appointment->count());
     }
 }
