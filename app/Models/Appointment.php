@@ -25,6 +25,7 @@ class Appointment extends Model
         'doctor_diagnosis',
         'doctor_admission_status',
         'doctor_test_status',
+        'doctor_test_description',
         'doctor_prescription',
     ];
 }

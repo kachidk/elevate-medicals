@@ -29,6 +29,8 @@ function Welcome({canLogin, canRegister}) {
                     <InertiaLink className="inline-flex px-8 py-4 mr-4 tracking-widest text-white uppercase transition duration-500 ease-in-out transform bg-gray-500 sm:mb-0 hover:bg-purple-600 hover:-translate-y-1 hover:scale-110 focus:bg-purple-600 focus:-translate-y-1 focus:scale-110"
                       href={authRole == 'nurse' ?
                               "/nurseDashboard" :
+                            authRole == 'doctor' ?
+                              "/doctorDashboard" :
                             "/home"
                       }
                     >

@@ -10,9 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import axios from 'axios';
 import Pagination from "react-js-pagination";
 import TextField from "@material-ui/core/TextField";
-import OngoingTodayInfo from './OngoingTodayInfo';
-
-
+import AppointmentInfo from './AppointmentInfo';
 
 const columns = [
   { id: 'name',
@@ -35,23 +33,22 @@ const columns = [
   },
 ];
 
-
-function OngoingTodayAppointment() {
-  const [ongoingData, setOngoingData] = useState(null);
+function CompletedAppointment() {
+  const [completedData, setCompletedData] = useState(null);
   const [searchState, setSearchState] = useState('');
-  const [ongoingInfo, setOngoingInfo] = useState(null);
+  const [completedInfo, setCompletedInfo] = useState(null)
 
   const classes = useStyles();
 
-  function fetchOngoingData(pageNumber = 1) {
-    axios.get("nurseOngoingTodayAppointment",{
+  function fetchCompletedData(pageNumber = 1) {
+    axios.get("labTodayCompletedAppointment",{
         params: {
           page: pageNumber,
           searchValue: searchState.length >= 4 ? searchState : '',
         }
     })
       .then((res)=>{
-        setOngoingData(res.data)
+        setCompletedData(res.data)
       }).catch((err)=>{
         if(err.response){
           Object.keys(err.response.data.errors).forEach(key=>{
@@ -63,19 +60,18 @@ function OngoingTodayAppointment() {
 
   useEffect(() => {
     if(searchState.length >= 4 || searchState.length == 0){
-      fetchOngoingData()
+      fetchCompletedData()
     }
   }, [searchState])
 
   // patient information
-  function getOngoingInfo(id) {
-    axios.get("nurseTodayOngoingInfo",{
+  function getCompletedInfo(id) {
+    axios.get("labFetchAppointmentId",{
       params: {
         id: id,
       }
-  })
-    .then((res)=>{
-      setOngoingInfo(res.data)
+  }).then((res)=>{
+      setCompletedInfo(res.data)
     }).catch((err)=>{
       if(err.response){
         Object.keys(err.response.data.errors).forEach(key=>{
@@ -88,11 +84,11 @@ function OngoingTodayAppointment() {
     <>
        {/* search */}
        <div className="flex items-center justify-between px-2">
-          <div>
+         <div>
             <h1 className="font-bold text-md">
-              Today's Ongoing Appointments
+             Today's Completed Appointments
             </h1>
-          </div>
+         </div>
           <TextField
             label="Search"
             id="patientId"
@@ -124,13 +120,13 @@ function OngoingTodayAppointment() {
                 </TableRow>
               </TableHead>
               <TableBody>
-                { ongoingData &&
-                  ongoingData.data.map((xyz, index)=>(
+                { completedData &&
+                  completedData.data.map((xyz, index)=>(
                     <TableRow hover role="checkbox" tabIndex={-1} key={index}>
                           <TableCell>
                             <span
                               className="text-blue-500 cursor-pointer"
-                              onClick={()=>getOngoingInfo(xyz.id)}
+                              onClick={()=>getCompletedInfo(xyz.id)}
                             >
                               {xyz.patient_name}
                             </span>
@@ -142,7 +138,7 @@ function OngoingTodayAppointment() {
                             {xyz.patient_age}
                           </TableCell>
                           <TableCell>
-                            <span className={xyz.status == "ongoing" ? "text-red-500" : undefined}>
+                            <span className={xyz.status == "completed" ? "text-green-500" : undefined}>
                               {xyz.status}
                             </span>
                           </TableCell>
@@ -156,13 +152,13 @@ function OngoingTodayAppointment() {
           {/* pagination */}
           <div className="flex justify-end p-2 mr-4 md:p-5">
           {
-            ongoingData &&
+            completedData &&
               <Pagination
-                activePage={ongoingData.current_page}
-                itemsCountPerPage={ongoingData.per_page}
-                totalItemsCount={ongoingData.total}
+                activePage={completedData.current_page}
+                itemsCountPerPage={completedData.per_page}
+                totalItemsCount={completedData.total}
                 pageRangeDisplayed={5}
-                onChange={(pageNumber)=> fetchOngoingData(pageNumber)}
+                onChange={(pageNumber)=> fetchCompletedData(pageNumber)}
                 pageRangeDisplayed={screen.width < 768 ? 3 : 5}
                 innerClass="inline-flex items-center text-gray-700"
                 itemClassPrev="mr-2"
@@ -175,10 +171,11 @@ function OngoingTodayAppointment() {
           </div>
           {/* ! pagination */}
 
-          { ongoingInfo &&
-            <OngoingTodayInfo
-              open={ongoingInfo}
-              onClose={setOngoingInfo}
+          {
+            completedInfo &&
+            <AppointmentInfo
+              open={completedInfo}
+              onClose={setCompletedInfo}
               header="Patient Information"
             />
           }
@@ -188,7 +185,7 @@ function OngoingTodayAppointment() {
   )
 }
 
-export default OngoingTodayAppointment
+export default CompletedAppointment
 
 const useStyles = makeStyles({
   root: {

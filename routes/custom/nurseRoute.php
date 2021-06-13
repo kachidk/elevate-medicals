@@ -31,5 +31,7 @@ Route::get('nurseAllOngoingAppointment', [NurseAppointmentController::class, 'on
 Route::get('nurseAllOngoingInfo', [NurseAppointmentController::class, 'viewAllOngoingData']);
 Route::get('nurseAllCompletedAppointment', [NurseAppointmentController::class, 'completedAllAppointmentIndex']);
 Route::get('nurseAllCompletedInfo', [NurseAppointmentController::class, 'viewAllCompletedData']);
+Route::get('nurseOngoingTodayAppointmentCount', [NurseAppointmentController::class, 'ongoingTodayCount']);
+Route::get('nurseCompletedTodayAppointmentCount', [NurseAppointmentController::class, 'completedTodayCount']);
 
 

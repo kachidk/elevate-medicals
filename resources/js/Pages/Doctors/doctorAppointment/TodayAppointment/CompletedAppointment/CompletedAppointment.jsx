@@ -45,8 +45,7 @@ function CompletedAppointment() {
           page: pageNumber,
           searchValue: searchState.length >= 4 ? searchState : '',
         }
-    })
-      .then((res)=>{
+    }).then((res)=>{
         setCompletedData(res.data)
       }).catch((err)=>{
         if(err.response){
@@ -69,8 +68,7 @@ function CompletedAppointment() {
       params: {
         id: id,
       }
-  })
-    .then((res)=>{
+  }).then((res)=>{
       setCompletedInfo(res.data)
     }).catch((err)=>{
       if(err.response){
@@ -93,8 +91,8 @@ function CompletedAppointment() {
             label="Search"
             id="patientId"
             placeholder="Search (min 4 letters)"
-           // className={classes.textField}
-            helperText="Some important text"
+            helperText={searchState.length < 4 && searchState != '' ? 'Please input at least 4 characters' : ''}
+            error={searchState.length < 4 && searchState != '' ? true : false}
             margin="normal"
             variant="outlined"
             onChange={(e)=>setSearchState(e.target.value)}
@@ -160,15 +158,12 @@ function CompletedAppointment() {
                 pageRangeDisplayed={5}
                 onChange={(pageNumber)=> fetchCompletedData(pageNumber)}
                 pageRangeDisplayed={screen.width < 768 ? 3 : 5}
-                innerClass="flex text-blue-500"
-                itemClassPrev="px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"
-                itemClassNext="px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer ml-2"
-                itemClass="px-4 py-1 border cursor-pointer"
-                itemClassLast="ml-1 hidden md:inline-flex"
-                itemClassFirst="mr-1 hidden md:inline-flex"
-                activeClass="bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer"
-                firstPageText="First"
-                lastPageText="Last"
+                innerClass="inline-flex items-center text-gray-700"
+                itemClassPrev="mr-2"
+                itemClassNext="ml-2"
+                itemClass="px-3 py-1 rounded-md cursor-pointer"
+                hideFirstLastPages
+                activeClass="text-white bg-blue-600 border border-blue-600"
               />
           }
           </div>

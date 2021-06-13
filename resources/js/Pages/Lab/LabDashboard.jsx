@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import LabLayout from './LabLayout/LabLayout';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
@@ -7,12 +8,11 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import axios from 'axios';
 import Pagination from "react-js-pagination";
 import TextField from "@material-ui/core/TextField";
-import OngoingTodayInfo from './OngoingTodayInfo';
-
-
+import BadgeText from "@/components/BadgeText";
+import Today from '@material-ui/icons/Today';
+import axios from 'axios';
 
 const columns = [
   { id: 'name',
@@ -35,22 +35,34 @@ const columns = [
   },
 ];
 
-
-function OngoingTodayAppointment() {
+function LabDashboard() {
+  const [ongoingCount, setOngoingCount] = useState();
+  const [completedCount, setCompletedCount] = useState();
+  const [allOngoingCount, setAllOngoingCount] = useState();
   const [ongoingData, setOngoingData] = useState(null);
   const [searchState, setSearchState] = useState('');
-  const [ongoingInfo, setOngoingInfo] = useState(null);
 
   const classes = useStyles();
 
+  useEffect(() => {
+    async function fetchCount() {
+      const res1 = await axios.get('labOngoingTodayAppointmentCount')
+      const res2 = await axios.get('labCompletedTodayAppointmentCount')
+      const res3 = await axios.get('labAllOngoingTodayAppointmentCount')
+      setOngoingCount(res1.data)
+      setCompletedCount(res2.data)
+      setAllOngoingCount(res3.data)
+    }
+    fetchCount();
+  }, [])
+
   function fetchOngoingData(pageNumber = 1) {
-    axios.get("nurseOngoingTodayAppointment",{
+    axios.get("labTodayOngoingAppointment",{
         params: {
           page: pageNumber,
           searchValue: searchState.length >= 4 ? searchState : '',
         }
-    })
-      .then((res)=>{
+    }).then((res)=>{
         setOngoingData(res.data)
       }).catch((err)=>{
         if(err.response){
@@ -60,32 +72,92 @@ function OngoingTodayAppointment() {
         }
       })
   }
-
   useEffect(() => {
     if(searchState.length >= 4 || searchState.length == 0){
       fetchOngoingData()
     }
   }, [searchState])
 
-  // patient information
-  function getOngoingInfo(id) {
-    axios.get("nurseTodayOngoingInfo",{
-      params: {
-        id: id,
-      }
-  })
-    .then((res)=>{
-      setOngoingInfo(res.data)
-    }).catch((err)=>{
-      if(err.response){
-        Object.keys(err.response.data.errors).forEach(key=>{
-          alert("error: " + err.response.data.errors[key][0])
-        })
-      }
-    })
-  }
   return (
-    <>
+    <div>
+      <LabLayout>
+        <div className="header">
+          <div className="header-text">
+            Lab Dashboard
+          </div>
+        </div>
+
+        <div className="grid gap-6 mx-auto mb-8 md:grid-cols-2 xl:grid-cols-3 w-max">
+              {/* Card */}
+              <div
+                className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  className="p-3 mr-4 text-red-500 bg-red-100 rounded-full dark:text-blue-100 dark:bg-blue-500"
+                >
+                  <Today/>
+                </div>
+                <div>
+                  <p
+                    className="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    Today's ongoing appointment
+                  </p>
+                  <p
+                    className="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    {ongoingCount}
+                  </p>
+                </div>
+              </div>
+              {/* Card */}
+              <div
+                className="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  className="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
+                >
+                  <Today/>
+                </div>
+                <div>
+                  <p
+                    className="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    Today's completed appointment
+                  </p>
+                  <p
+                    className="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    {completedCount}
+                  </p>
+                </div>
+              </div>
+
+              {/* Card */}
+              <div
+                className="flex items-center p-4 bg-white rounded-lg shadow-sm dark:bg-gray-800"
+              >
+                <div
+                  className="p-3 mr-4 text-yellow-500 bg-yellow-100 rounded-full dark:text-yellow-100 dark:bg-yellow-500"
+                >
+                  <Today/>
+                </div>
+                <div>
+                  <p
+                    className="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    All ongoing appointment
+                  </p>
+                  <p
+                    className="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    {allOngoingCount}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
        {/* search */}
        <div className="flex items-center justify-between px-2">
           <div>
@@ -97,14 +169,11 @@ function OngoingTodayAppointment() {
             label="Search"
             id="patientId"
             placeholder="Search (min 4 letters)"
-            helperText={searchState.length < 4 && searchState != '' ? 'Please input at least 4 characters' : ''}
-            error={searchState.length < 4 && searchState != '' ? true : false}
             margin="normal"
             variant="outlined"
             onChange={(e)=>setSearchState(e.target.value)}
           />
         </div>
-
 
         {/* table */}
         <Paper className={classes.root}>
@@ -128,10 +197,7 @@ function OngoingTodayAppointment() {
                   ongoingData.data.map((xyz, index)=>(
                     <TableRow hover role="checkbox" tabIndex={-1} key={index}>
                           <TableCell>
-                            <span
-                              className="text-blue-500 cursor-pointer"
-                              onClick={()=>getOngoingInfo(xyz.id)}
-                            >
+                            <span>
                               {xyz.patient_name}
                             </span>
                           </TableCell>
@@ -142,9 +208,9 @@ function OngoingTodayAppointment() {
                             {xyz.patient_age}
                           </TableCell>
                           <TableCell>
-                            <span className={xyz.status == "ongoing" ? "text-red-500" : undefined}>
+                            <BadgeText type={xyz.status == "ongoing" ? "danger" : null}>
                               {xyz.status}
-                            </span>
+                            </BadgeText>
                           </TableCell>
                     </TableRow>
                   ))
@@ -155,8 +221,7 @@ function OngoingTodayAppointment() {
 
           {/* pagination */}
           <div className="flex justify-end p-2 mr-4 md:p-5">
-          {
-            ongoingData &&
+          { ongoingData &&
               <Pagination
                 activePage={ongoingData.current_page}
                 itemsCountPerPage={ongoingData.per_page}
@@ -175,20 +240,15 @@ function OngoingTodayAppointment() {
           </div>
           {/* ! pagination */}
 
-          { ongoingInfo &&
-            <OngoingTodayInfo
-              open={ongoingInfo}
-              onClose={setOngoingInfo}
-              header="Patient Information"
-            />
-          }
         </Paper>
         {/* ! table */}
-    </>
+      </div>
+      </LabLayout>
+    </div>
   )
 }
 
-export default OngoingTodayAppointment
+export default LabDashboard
 
 const useStyles = makeStyles({
   root: {

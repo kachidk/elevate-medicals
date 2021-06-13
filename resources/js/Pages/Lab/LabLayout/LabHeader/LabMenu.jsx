@@ -3,7 +3,7 @@ import { InertiaLink, usePage } from '@inertiajs/inertia-react';
 import { useDefaultPhoto } from '@/hooks/constants';
 import { Inertia } from '@inertiajs/inertia';
 
-function NurseMenu() {
+function LabMenu() {
       const [dropdownOpen, setDropdownOpen] = useState(false);
       const trigger = useRef(null);
       const dropdown = useRef(null);
@@ -34,9 +34,8 @@ function NurseMenu() {
         e.preventDefault();
         Inertia.post('/logout');
       };
-
-    return (
-        <div className="relative inline-flex">
+  return (
+    <div className="relative inline-flex">
             <button
                 ref={trigger}
                 className="inline-flex items-center justify-center group"
@@ -93,7 +92,8 @@ function NurseMenu() {
                 </section>
             }
         </div>
-    )
+  )
 }
 
-export default NurseMenu
+export default LabMenu
+

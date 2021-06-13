@@ -50,9 +50,10 @@ function AddAppointmentModal(props) {
     e.preventDefault();
     axios.post('/nurseAddAppointmentSubmit',addAppointmentForm)
       .then(()=>{
+        clearAppointmentForm();
+        toast.success("appointment submitted")
+      }).then(()=>{
           props.onClose(null);
-          clearAppointmentForm();
-          toast.success("appointment submitted")
       }).catch((err)=>{
         if(err.response){
           Object.keys(err.response.data.errors).forEach(key=>{

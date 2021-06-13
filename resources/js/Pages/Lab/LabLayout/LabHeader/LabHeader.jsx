@@ -1,8 +1,8 @@
 import React from 'react';
-import NurseMenu from './NurseMenu';
+import LabMenu from './LabMenu'
 
-function NurseHeader({sidebarOpen, setSidebarOpen}) {
-    return (
+function LabHeader({sidebarOpen, setSidebarOpen}) {
+  return (
     <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 -mb-px">
@@ -29,13 +29,13 @@ function NurseHeader({sidebarOpen, setSidebarOpen}) {
 
           {/* Header: Right side */}
           <div className="flex items-center">
-            <NurseMenu />
+            <LabMenu />
           </div>
 
         </div>
       </div>
     </header>
-    )
+  )
 }
 
-export default NurseHeader
+export default LabHeader

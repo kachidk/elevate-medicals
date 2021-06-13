@@ -1,6 +1,6 @@
 import React from 'react'
 
-function LabDashboard() {
+function AppointmentInfo() {
   return (
     <div>
 
@@ -8,4 +8,4 @@ function LabDashboard() {
   )
 }
 
-export default LabDashboard
+export default AppointmentInfo

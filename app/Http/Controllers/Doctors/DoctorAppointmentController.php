@@ -90,4 +90,44 @@ class DoctorAppointmentController extends Controller
         }
         return response($appointment->orderBy('created_at', 'ASC')->paginate(10));
     }
+
+    public function ongoingTodayCount()
+    {
+        $appointment = Appointment::query();
+        $appointment->where('status', 'ongoing');
+        $appointment->whereDate('created_at', Carbon::today());
+        return response($appointment->count());
+    }
+
+    public function completedTodayCount()
+    {
+        $appointment = Appointment::query();
+        $appointment->where('status', 'completed');
+        $appointment->whereDate('created_at', Carbon::today());
+        return response($appointment->count());
+    }
+
+    public function diagnosisSubmit(Request $req)
+    {
+        $req->validate([
+            'patientComplain' => 'required',
+            'diagnosis' => 'required',
+            'prescription' => 'required',
+            'labTest' => 'required',
+            'admit' => 'required'
+        ]);
+        $appointment = Appointment::find($req->appointmentId);
+        $appointment->doctor_name = $req->doctorName;
+        $appointment->doctor_id = $req->doctorId;
+        $appointment->doctor_patient_complain = $req->patientComplain;
+        $appointment->doctor_diagnosis = $req->diagnosis;
+        $appointment->doctor_prescription = $req->prescription;
+        $appointment->doctor_test_status = $req->labTest;
+        $appointment->doctor_admission_status = $req->admit;
+        $appointment->status = $req->appointmentStatus;
+        $appointment->doctor_test_description = $req->labTestDescription;
+        $appointment->update();
+
+        return redirect()->back();
+    }
 }

@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\shared\profileController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Application;
 use Inertia\Inertia;
 
 /*

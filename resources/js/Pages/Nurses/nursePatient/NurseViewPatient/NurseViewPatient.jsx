@@ -164,15 +164,12 @@ function NurseViewPatient() {
                 pageRangeDisplayed={5}
                 onChange={(pageNumber)=> fetchPatientData(pageNumber)}
                 pageRangeDisplayed={screen.width < 768 ? 3 : 5}
-                innerClass="flex text-blue-500"
-                itemClassPrev="px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"
-                itemClassNext="px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer ml-2"
-                itemClass="px-4 py-1 border cursor-pointer"
-                itemClassLast="ml-1 hidden md:inline-flex"
-                itemClassFirst="mr-1 hidden md:inline-flex"
-                activeClass="bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer"
-                firstPageText="First"
-                lastPageText="Last"
+                innerClass="inline-flex items-center text-gray-700"
+                itemClassPrev="mr-2"
+                itemClassNext="ml-2"
+                itemClass="px-3 py-1 rounded-md cursor-pointer"
+                hideFirstLastPages
+                activeClass="text-white bg-blue-600 border border-blue-600"
               />
           }
           </div>

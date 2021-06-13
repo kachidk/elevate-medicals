@@ -141,4 +141,20 @@ class NurseAppointmentController extends Controller
         $info = Appointment::find(request('id'));
         return response($info);
     }
+
+    public function ongoingTodayCount()
+    {
+        $appointment = Appointment::query();
+        $appointment->where('status', 'ongoing');
+        $appointment->whereDate('created_at', Carbon::today());
+        return response($appointment->count());
+    }
+
+    public function completedTodayCount()
+    {
+        $appointment = Appointment::query();
+        $appointment->where('status', 'completed');
+        $appointment->whereDate('created_at', Carbon::today());
+        return response($appointment->count());
+    }
 }

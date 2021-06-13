@@ -63,7 +63,7 @@ function DoctorSidebar({ sidebarOpen, setSidebarOpen }) {
       {/* Sidebar header */}
       <div className="flex justify-between pr-3 mb-10 sm:px-2">
         {/* Logo */}
-        <InertiaLink href="/nurseDashboard" className="block">
+        <InertiaLink href="/doctorDashboard" className="block">
           <img src={logo} className="w-10 h-10 rounded-full" />
         </InertiaLink>
 

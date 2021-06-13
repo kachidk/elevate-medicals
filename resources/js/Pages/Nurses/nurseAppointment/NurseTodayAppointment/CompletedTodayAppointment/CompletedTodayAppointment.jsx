@@ -94,8 +94,8 @@ function CompletedTodayAppointment() {
             label="Search"
             id="patientId"
             placeholder="Search (min 4 letters)"
-           // className={classes.textField}
-            helperText="Some important text"
+            helperText={searchState.length < 4 && searchState != '' ? 'Please input at least 4 characters' : ''}
+            error={searchState.length < 4 && searchState != '' ? true : false}
             margin="normal"
             variant="outlined"
             onChange={(e)=>setSearchState(e.target.value)}

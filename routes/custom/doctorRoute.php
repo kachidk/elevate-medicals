@@ -16,3 +16,6 @@ Route::get('/doctorAllAppointment', [DoctorAppointmentController::class, 'allApp
 Route::get('doctorAllOngoingAppointment', [DoctorAppointmentController::class, 'ongoingAllAppointmentIndex']);
 Route::get('doctorAllCompletedAppointment', [DoctorAppointmentController::class, 'completedAllAppointmentIndex']);
 
+Route::get('doctorOngoingTodayAppointmentCount', [DoctorAppointmentController::class, 'ongoingTodayCount']);
+Route::get('doctorCompletedTodayAppointmentCount', [DoctorAppointmentController::class, 'completedTodayCount']);
+Route::post('doctorDiagnosisSubmit', [DoctorAppointmentController::class, 'diagnosisSubmit']);
