@@ -32821,7 +32821,7 @@ video {
   }
 }
 
-.header-text{
+.header-text {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -32837,12 +32837,12 @@ video {
   }
 }
 
-button:focus {
+*:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
-*:focus {
+button:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }

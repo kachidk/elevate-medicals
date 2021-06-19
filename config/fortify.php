@@ -70,8 +70,8 @@ return [
         if (Auth::user()->role == 'admin') {
            return route('adminDashboard');
         }
-        elseif(Auth::user()->role == 'user'){
-            return route('userDashboard');
+        elseif(Auth::user()->role == 'patient'){
+            return route('patientDashboard');
         }
         elseif(Auth::user()->role == 'doctor'){
             return route('doctorDashboard');

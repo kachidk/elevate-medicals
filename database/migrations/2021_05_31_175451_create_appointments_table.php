@@ -23,9 +23,9 @@ class CreateAppointmentsTable extends Migration
             $table->string('nurse_vital_blood_pressure')->nullable();
             $table->string('nurse_vital_weight')->nullable();
             $table->string('nurse_name')->nullable();
-            $table->string('nurse_id')->nullable();
+            $table->string('nurse_users_db_id')->nullable();
             $table->string('doctor_name')->nullable();
-            $table->string('doctor_id')->nullable();
+            $table->string('doctor_users_db_id')->nullable();
             $table->string('doctor_patient_complain')->nullable();
             $table->string('doctor_diagnosis')->nullable();
             $table->string('doctor_admission_status')->nullable();
@@ -35,6 +35,11 @@ class CreateAppointmentsTable extends Migration
             $table->string('lab_test_status')->nullable();
             $table->string('lab_test_result')->nullable();
             $table->string('lab_staff_name')->nullable();
+            $table->string('lab_staff_users_db_id')->nullable();
+            $table->string('pharmacy_status')->nullable();
+            $table->string('pharmacy_staff_name')->nullable();
+            $table->string('pharmacy_staff_users_db_id')->nullable();
+            $table->string('pharmacy_staff_comment')->nullable();
             $table->timestamps();
         });
     }

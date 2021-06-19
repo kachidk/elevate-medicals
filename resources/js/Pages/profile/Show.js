@@ -32,10 +32,10 @@ function Show() {
                   <InertiaLink href="/doctorDashboard" className="inline-flex">Doctor Home</InertiaLink> :
                 authRole == 'pharmacy' ?
                   <InertiaLink href="/pharmacyDashboard">Pharmacy Home</InertiaLink> :
-                authRole == 'user' ?
-                  <InertiaLink href="/userDashboard">Home</InertiaLink> :
+                authRole == 'patient' ?
+                  <InertiaLink href="/patientDashboard">Home</InertiaLink> :
                 authRole == 'admin' ?
-                  <InertiaLink href="/doctorDashboard">Admin Home</InertiaLink> :
+                  <InertiaLink href="/adminDashboard">Admin Home</InertiaLink> :
                 authRole == 'lab' ?
                   <InertiaLink href="/labDashboard">Lab Home</InertiaLink> :
                 null

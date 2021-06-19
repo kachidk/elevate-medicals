@@ -25,10 +25,10 @@ function NurseAddPatient() {
   function handleFormChange(e) {
     const key = e.target.id;
     const value = e.target.value;
-    setAddPatientForm((addPatientForm) => ({
+    setAddPatientForm({
       ...addPatientForm,
       [key]: value,
-    }));
+    });
   }
 
   function handleFormSubmit(e){
@@ -49,7 +49,7 @@ function NurseAddPatient() {
           })
           .then(()=>{
             // reset the addPatientForm(state)
-            setAddPatientForm((addPatientForm)=>({
+            setAddPatientForm({
               ...addPatientForm,
               name: "",
               patientId: "",
@@ -60,7 +60,7 @@ function NurseAddPatient() {
               lgaOfOrigin: "",
               residentialState: "",
               residentialLga: "",
-            }))
+            })
           })
           .catch((error)=>{
             setErrors(error.response.data.errors)

@@ -7,7 +7,7 @@ use App\Http\Controllers\Lab\LabAppointmentController;
 Route::get('/labDashboard', [LabController::class, 'labDashboardIndex'])->name('labDashboard');
 Route::get('labOngoingTodayAppointmentCount', [LabController::class, 'ongoingTodayCount']);
 Route::get('labCompletedTodayAppointmentCount', [LabController::class, 'completedTodayCount']);
-Route::get('labAllOngoingTodayAppointmentCount', [LabController::class, 'allOngoingTodayCount']);
+Route::get('labAllOngoingAppointmentCount', [LabController::class, 'allOngoingCount']);
 
 Route::get('labFetchAppointmentId', [LabAppointmentController::class, 'fetchAppointmentId']);
 

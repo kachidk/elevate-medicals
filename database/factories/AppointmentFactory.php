@@ -24,8 +24,9 @@ class AppointmentFactory extends Factory
     {
         return [
             'patient_name' => "fiona adeola",
-            'status' => "ongoing",
+            //'status' => "ongoing",
             //'status' => "completed",
+            'pharmacy_status' => 'ongoing',
             'lab_test_status' => 'ongoing',
             "created_at" => Carbon::today(),
             "updated_at" => Carbon::today()

@@ -19,7 +19,7 @@ class CheckRole
         if ($role == 'admin' && auth()->user()->role != 'admin' ) {
             abort(403);
         }
-        if ($role == 'user' && auth()->user()->role != 'user' ) {
+        if ($role == 'patient' && auth()->user()->role != 'patient' ) {
             abort(403);
         }
         if ($role == 'doctor' && auth()->user()->role != 'doctor' ) {

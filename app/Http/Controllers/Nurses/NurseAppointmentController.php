@@ -43,7 +43,7 @@ class NurseAppointmentController extends Controller
             'nurse_vital_blood_pressure' => $request->vitalBloodPressure,
             'nurse_vital_weight' => $request->vitalWeight,
             'nurse_name' => $request->nurseName,
-            'nurse_id' => $request->nurseId,
+            'nurse_users_db_id' => $request->nurseId,
             'status' => $request->status
         ]);
     }

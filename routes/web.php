@@ -36,8 +36,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::group(['middleware' => 'role:admin'], function() {
         require 'custom/adminRoute.php';
     });
-    Route::group(['middleware' => 'role:user'], function() {
-        require 'custom/userRoute.php';
+    Route::group(['middleware' => 'role:patient'], function() {
+        require 'custom/patientRoute.php';
     });
     Route::group(['middleware' => 'role:doctor'], function() {
         require 'custom/doctorRoute.php';

@@ -28,7 +28,7 @@ class LabController extends Controller
         $appointment->where('lab_test_status', 'completed');
         return response($appointment->count());
     }
-    public function allOngoingTodayCount()
+    public function allOngoingCount()
     {
         $appointment = Appointment::query();
         $appointment->where('lab_test_status', 'ongoing');

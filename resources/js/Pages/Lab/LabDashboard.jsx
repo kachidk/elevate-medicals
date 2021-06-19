@@ -48,7 +48,7 @@ function LabDashboard() {
     async function fetchCount() {
       const res1 = await axios.get('labOngoingTodayAppointmentCount')
       const res2 = await axios.get('labCompletedTodayAppointmentCount')
-      const res3 = await axios.get('labAllOngoingTodayAppointmentCount')
+      const res3 = await axios.get('labAllOngoingAppointmentCount')
       setOngoingCount(res1.data)
       setCompletedCount(res2.data)
       setAllOngoingCount(res3.data)
@@ -209,8 +209,8 @@ function LabDashboard() {
                             {xyz.patient_age}
                           </TableCell>
                           <TableCell>
-                            <BadgeText type={xyz.status == "ongoing" ? "danger" : null}>
-                              {xyz.status}
+                            <BadgeText type={xyz.lab_test_status == "ongoing" ? "danger" : null}>
+                              {xyz.lab_test_status}
                             </BadgeText>
                           </TableCell>
                     </TableRow>

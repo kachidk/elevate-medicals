@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { InertiaLink, usePage } from '@inertiajs/inertia-react';
 import { Inertia } from '@inertiajs/inertia';
-import { csrfToken } from '@/common/constants';
 import { useDefaultPhoto } from '@/hooks/constants';
 
 function DoctorMenu() {
@@ -85,7 +84,7 @@ function DoctorMenu() {
                 className="flex items-center px-3 py-1 text-sm font-medium text-indigo-500 hover:text-indigo-600"
                 type="submit"
               >
-                  Sign Out
+                Sign Out
               </button>
             </form>
           </li>

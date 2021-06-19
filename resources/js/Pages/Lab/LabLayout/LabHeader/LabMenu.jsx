@@ -57,39 +57,39 @@ function LabMenu() {
 
             {/* open dropdown if (dropdown = true) */}
             {
-                dropdownOpen &&
-                <section className="origin-top-right z-10 absolute top-full right-0 min-w-44 bg-white border border-gray-200 py-1.5 rounded shadow-lg overflow-hidden mt-1">
-                <div
-                  ref={dropdown}
-                  onFocus={() => setDropdownOpen(true)}
-                  onBlur={() => setDropdownOpen(false)}
-                >
-                <div className="pt-0.5 pb-2 px-3 mb-1 border-b border-gray-200">
-                  <div className="font-medium text-gray-800">{auth.user.name}</div>
-                  <div className="text-xs italic text-gray-500">{auth.user.email}</div>
-                </div>
-                <ul>
-                  <li>
-                    <InertiaLink
+              dropdownOpen &&
+              <section className="origin-top-right z-10 absolute top-full right-0 min-w-44 bg-white border border-gray-200 py-1.5 rounded shadow-lg overflow-hidden mt-1">
+              <div
+                ref={dropdown}
+                onFocus={() => setDropdownOpen(true)}
+                onBlur={() => setDropdownOpen(false)}
+              >
+              <div className="pt-0.5 pb-2 px-3 mb-1 border-b border-gray-200">
+                <div className="font-medium text-gray-800">{auth.user.name}</div>
+                <div className="text-xs italic text-gray-500">{auth.user.email}</div>
+              </div>
+              <ul>
+                <li>
+                  <InertiaLink
+                    className="flex items-center px-3 py-1 text-sm font-medium text-indigo-500 hover:text-indigo-600"
+                    href="/profile"
+                  >
+                    Profile
+                  </InertiaLink>
+                </li>
+                <li>
+                  <form onSubmit={logout}>
+                    <button
                       className="flex items-center px-3 py-1 text-sm font-medium text-indigo-500 hover:text-indigo-600"
-                      href="/profile"
+                      type="submit"
                     >
-                      Profile
-                    </InertiaLink>
-                  </li>
-                  <li>
-                    <form onSubmit={logout}>
-                      <button
-                        className="flex items-center px-3 py-1 text-sm font-medium text-indigo-500 hover:text-indigo-600"
-                        type="submit"
-                      >
-                          Sign Out
-                      </button>
-                    </form>
-                  </li>
-                </ul>
-                </div>
-                </section>
+                        Sign Out
+                    </button>
+                  </form>
+                </li>
+              </ul>
+              </div>
+              </section>
             }
         </div>
   )

@@ -16,6 +16,7 @@ function AppointmentInfo(props) {
   const classes = useStyles();
   const authUser = usePage().props.user;
   const [labTestDescriptionView, setLabTestDescriptionView] = useState(false)
+  const [pxDescriptionView, setPxDescriptionView] = useState(false);
 
   const form = useForm({
     appointmentId: '',
@@ -23,6 +24,7 @@ function AppointmentInfo(props) {
     doctorId: '',
     patientComplain: '',
     diagnosis: '',
+    prescriptionStatus: false,
     prescription: '',
     appointmentStatus: '',
     labTest: false,
@@ -138,7 +140,7 @@ function AppointmentInfo(props) {
             <Divider/>
               <div className="mt-3">
                 <h1 className="mb-2 text-2xl font-bold">Vitals:</h1>
-                <div className="grid gap-4 md:grid-flow-col md:grid-cols-2 md:grid-rows-3 md:gap-6">
+                <div className="grid gap-4 md:grid-flow-col md:grid-cols-2 md:grid-rows-4 md:gap-6">
                 <TextField
                   onChange={(e)=>form.setData('patientComplain', e.target.value)}
                   defaultValue={form.data.patientComplain}
@@ -159,16 +161,30 @@ function AppointmentInfo(props) {
                   variant="outlined"
                   fullWidth
                 />
-                <TextField
-                  onChange={(e)=>form.setData('prescription', e.target.value)}
-                  defaultValue={form.data.prescription}
-                  id="prescription"
-                  label="Prescription"
-                  multiline
-                  rows={3}
-                  variant="outlined"
-                  fullWidth
-                />
+                <div className="flex items-center">
+                  <FormControlLabel
+                    control={<Switch
+                      checked={form.data.prescriptionStatus}
+                      onChange={(e)=>{form.setData('prescriptionStatus', e.target.checked)
+                        setPxDescriptionView(!pxDescriptionView)
+                      }}
+                      name="checkedA" />}
+                    labelPlacement="start"
+                    label="Prescribe Drugs"
+                  />
+                </div>
+                { pxDescriptionView &&
+                  <TextField
+                    onChange={(e)=>form.setData('prescription', e.target.value)}
+                    defaultValue={form.data.prescription}
+                    id="prescription"
+                    label="Prescription"
+                    multiline
+                    rows={3}
+                    variant="outlined"
+                    fullWidth
+                  />
+                }
                 <div className="flex items-center">
                   <FormControlLabel
                     control={<Switch
@@ -176,7 +192,7 @@ function AppointmentInfo(props) {
                       onChange={(e)=>{form.setData('labTest', e.target.checked)
                         setLabTestDescriptionView(!labTestDescriptionView)
                       }}
-                      name="checkedA" />}
+                      name="checkedB" />}
                     labelPlacement="start"
                     label="Go for Lab Test"
                   />

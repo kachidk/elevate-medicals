@@ -112,13 +112,14 @@ class DoctorAppointmentController extends Controller
         $req->validate([
             'patientComplain' => 'required',
             'diagnosis' => 'required',
+            'prescriptionStatus' => 'required, boolean',
             'prescription' => 'required',
             'labTest' => 'required, boolean',
             'admit' => 'required'
         ]);
         $appointment = Appointment::find($req->appointmentId);
         $appointment->doctor_name = $req->doctorName;
-        $appointment->doctor_id = $req->doctorId;
+        $appointment->doctor_users_db_id = $req->doctorId;
         $appointment->doctor_patient_complain = $req->patientComplain;
         $appointment->doctor_diagnosis = $req->diagnosis;
         $appointment->doctor_prescription = $req->prescription;
@@ -128,6 +129,9 @@ class DoctorAppointmentController extends Controller
         $appointment->doctor_test_description = $req->labTestDescription;
         if($req->labTest){
             $appointment->lab_test_status = 'ongoing';
+        }
+        if($req->prescriptionStatus){
+            $appointment->pharmacy_status = 'ongoing';
         }
         $appointment->update();
 

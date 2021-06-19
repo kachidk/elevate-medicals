@@ -18,9 +18,9 @@ class Appointment extends Model
         'nurse_vital_blood_pressure',
         'nurse_vital_weight',
         'nurse_name',
-        'nurse_id',
+        'nurse_users_db_id',
         'doctor_name',
-        'doctor_id',
+        'doctor_users_db_id',
         'doctor_patient_complain',
         'doctor_diagnosis',
         'doctor_admission_status',
@@ -29,6 +29,11 @@ class Appointment extends Model
         'doctor_prescription',
         'lab_test_status',
         'lab_test_result',
-        'lab_staff_name'
+        'lab_staff_name',
+        'lab_staff_users_db_id',
+        'pharmacy_status',
+        'pharmacy_staff_name',
+        'pharmacy_staff_users_db_id',
+        'pharmacy_staff_comment'
     ];
 }

@@ -66,9 +66,12 @@ class LabAppointmentController extends Controller
             $appointment->lab_test_result = $req->testResult;
             $appointment->lab_test_status = 'completed';
             $appointment->lab_staff_name = $req->staffName;
+            $appointment->lab_staff_users_db_id = auth()->user()->id;
             $appointment->update();
         }
     }
+
+    // appointment all
     public function allAppointmentIndex()
     {
         return inertia('Lab/labAppointment/AllAppointment/AllAppointment');
