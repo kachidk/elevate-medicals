@@ -6,8 +6,14 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
-import { ArrowBack, Home, ExpandLess, ExpandMore, Remove } from "@material-ui/icons";
-import TodayIcon from '@material-ui/icons/Today';
+import {
+  ArrowBack,
+  Home,
+  ExpandLess,
+  ExpandMore,
+  Remove,
+} from "@material-ui/icons";
+import PeopleIcon from "@material-ui/icons/People";
 
 function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
   const trigger = useRef(null);
@@ -22,7 +28,8 @@ function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
         !sidebarOpen ||
         sidebar.current.contains(target) ||
         trigger.current.contains(target)
-      ) return;
+      )
+        return;
       setSidebarOpen(false);
     };
     document.addEventListener("click", clickHandler);
@@ -89,33 +96,30 @@ function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
           >
             {/* home */}
             <ListItem component={InertiaLink} href="/adminDashboard" button>
-                <Home className={classes.listIcons} />
-                <ListItemText primary="Home" />
+              <Home className={classes.listIcons} />
+              <ListItemText primary="Home" />
             </ListItem>
 
             {/* appointment menu */}
-            <ListItem button onClick={()=>setAppointmentDropdown(!appointmentDropdown)}>
-              <TodayIcon className={classes.listIcons}/>
+            <ListItem
+              button
+              onClick={() => setAppointmentDropdown(!appointmentDropdown)}
+            >
+              <PeopleIcon className={classes.listIcons} />
               <ListItemText primary="Users" />
               {appointmentDropdown ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
             <Collapse in={appointmentDropdown} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-
                 {/* today appointment */}
-                <ListItem button className={classes.nested}>
-                  <InertiaLink href="/pharmacyTodayAppointment" className="flex items-center w-full">
-                    <Remove className={classes.listIcons}/>
-                    <ListItemText primary="Today's Appointment" />
-                  </InertiaLink>
-                </ListItem>
-
-                {/* all appointment */}
-                <ListItem button className={classes.nested}>
-                  <InertiaLink href="/pharmacyAllAppointment" className="flex items-center w-full">
-                    <Remove className={classes.listIcons}/>
-                    <ListItemText primary="All Appointment" />
-                  </InertiaLink>
+                <ListItem
+                  component={InertiaLink}
+                  href="/adminChangeRole"
+                  button
+                  className={classes.nested}
+                >
+                  <Remove className={classes.listIcons} />
+                  <ListItemText primary="Change Role" />
                 </ListItem>
               </List>
             </Collapse>
@@ -123,10 +127,10 @@ function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default AdminSidebar
+export default AdminSidebar;
 
 const useStlyes = makeStyles({
   root: {
@@ -141,9 +145,9 @@ const useStlyes = makeStyles({
     marginRight: "10px",
   },
   arrowBackIcon: {
-    color: "white"
+    color: "white",
   },
   active: {
-    color: "blue"
-  }
+    color: "blue",
+  },
 });

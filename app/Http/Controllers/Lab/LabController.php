@@ -11,7 +11,7 @@ class LabController extends Controller
 {
     public function labDashboardIndex()
     {
-       return inertia('Lab/LabDashboard');
+        return inertia('Lab/LabDashboard');
     }
     public function ongoingTodayCount()
     {
