@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is powered by React, Inertia, Tailwind and Laravel.
+This is powered by React, Inertia, Material UI, Tailwind and Laravel.
 
 ## How do I set this up
 
