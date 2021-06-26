@@ -1,16 +1,11 @@
 module.exports = {
+  mode: "jit",
   purge: {
-    content: [
-     './resources/**/*.blade.php',
-     './resources/**/*.js',
-     './resources/**/*.vue',
-    ],
-     options: {
-        blocklist: [
-          './resources/js/components/*.js'
-        ]
-     }
+    content: ["./resources/**/*.{blade.php,js,jsx}"],
+    options: {
+      blocklist: ["./resources/js/components/*.js"],
     },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
@@ -19,4 +14,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};

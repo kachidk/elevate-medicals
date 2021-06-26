@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("../../node_modules/react-toastify/dist/ReactToastify.min.css");
 
 .header {
     @apply relative p-1 mb-8 overflow-hidden bg-indigo-200 rounded-sm sm:p-2;
@@ -13,10 +12,9 @@
 }
 
 * {
-  @apply focus:outline-none;
+    @apply focus:outline-none;
 }
 
 button {
-  @apply focus:outline-none;
+    @apply focus:outline-none;
 }
-

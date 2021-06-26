@@ -13,6 +13,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('js/app.css') }}">
 
         <!-- Scripts -->
         @routes
