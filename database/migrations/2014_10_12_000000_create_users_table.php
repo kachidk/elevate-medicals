@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
 
         $admin = new User();
         $admin->name = 'admin';
-        $admin->email = 'admin@admin';
+        $admin->email = 'admin@admin.com';
         $admin->password = 'nwanguma';
         $admin->role = 'admin';
         $admin->save();
