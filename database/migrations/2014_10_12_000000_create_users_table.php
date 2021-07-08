@@ -3,6 +3,7 @@
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 
 class CreateUsersTable extends Migration
@@ -29,7 +30,7 @@ class CreateUsersTable extends Migration
         $admin = new User();
         $admin->name = 'admin';
         $admin->email = 'admin@admin.com';
-        $admin->password = 'nwanguma';
+        $admin->password = Hash::make('nwanguma');
         $admin->role = 'admin';
         $admin->save();
     }
