@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\shared\profileController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -52,4 +53,8 @@ Route::group(['middleware' => 'auth'], function() {
         require 'custom/labRoute.php';
     });
     require 'api/global.php';
+
+    Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
 });
