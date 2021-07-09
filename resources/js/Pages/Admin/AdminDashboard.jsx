@@ -23,7 +23,7 @@ function AdminDashboard() {
         <div className="grid gap-6 mx-auto mb-8 sm:grid-cols-3 md:grid-cols-4 w-max">
           {/* <!-- Card --> */}
           <div className="flex items-center p-4 bg-white rounded-lg shadow-xs">
-            <div className="p-3 mr-4 text-gray-500 bg-gray-100 rounded-full">
+            <div className="p-3 mr-4 bg-gray-100 rounded-full text-blueGray-500">
               <PeopleIcon />
             </div>
             <div>
@@ -35,7 +35,7 @@ function AdminDashboard() {
           </div>
           {/* <!-- Card --> */}
           <div className="flex items-center p-4 bg-white rounded-lg shadow-xs">
-            <div className="p-3 mr-4 text-gray-500 bg-gray-100 rounded-full">
+            <div className="p-3 mr-4 text-red-500 bg-gray-100 rounded-full">
               <PeopleIcon />
             </div>
             <div>
@@ -47,7 +47,7 @@ function AdminDashboard() {
           </div>
           {/* <!-- Card --> */}
           <div className="flex items-center p-4 bg-white rounded-lg shadow-xs">
-            <div className="p-3 mr-4 text-gray-500 bg-gray-100 rounded-full">
+            <div className="p-3 mr-4 text-pink-500 bg-gray-100 rounded-full">
               <PeopleIcon />
             </div>
             <div>
@@ -59,7 +59,7 @@ function AdminDashboard() {
           </div>
           {/* <!-- Card --> */}
           <div className="flex items-center p-4 bg-white rounded-lg shadow-xs">
-            <div className="p-3 mr-4 text-gray-500 bg-gray-100 rounded-full">
+            <div className="p-3 mr-4 text-blue-500 bg-gray-100 rounded-full">
               <PeopleIcon />
             </div>
             <div>
@@ -71,7 +71,7 @@ function AdminDashboard() {
           </div>
           {/* <!-- Card --> */}
           <div className="flex items-center p-4 bg-white rounded-lg shadow-xs">
-            <div className="p-3 mr-4 text-gray-500 bg-gray-100 rounded-full">
+            <div className="p-3 mr-4 bg-gray-100 rounded-full text-fuchsia-500">
               <PeopleIcon />
             </div>
             <div>
@@ -83,7 +83,7 @@ function AdminDashboard() {
           </div>
           {/* <!-- Card --> */}
           <div className="flex items-center p-4 bg-white rounded-lg shadow-xs">
-            <div className="p-3 mr-4 text-gray-500 bg-gray-100 rounded-full">
+            <div className="p-3 mr-4 text-teal-500 bg-gray-100 rounded-full">
               <PeopleIcon />
             </div>
             <div>

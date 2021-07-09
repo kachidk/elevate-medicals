@@ -21143,7 +21143,7 @@ function AdminDashboard() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "flex items-center p-4 bg-white rounded-lg shadow-xs",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "p-3 mr-4 text-gray-500 bg-gray-100 rounded-full",
+            className: "p-3 mr-4 bg-gray-100 rounded-full text-blueGray-500",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_icons_People__WEBPACK_IMPORTED_MODULE_5__.default, {})
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
@@ -21157,7 +21157,7 @@ function AdminDashboard() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "flex items-center p-4 bg-white rounded-lg shadow-xs",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "p-3 mr-4 text-gray-500 bg-gray-100 rounded-full",
+            className: "p-3 mr-4 text-red-500 bg-gray-100 rounded-full",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_icons_People__WEBPACK_IMPORTED_MODULE_5__.default, {})
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
@@ -21171,7 +21171,7 @@ function AdminDashboard() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "flex items-center p-4 bg-white rounded-lg shadow-xs",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "p-3 mr-4 text-gray-500 bg-gray-100 rounded-full",
+            className: "p-3 mr-4 text-pink-500 bg-gray-100 rounded-full",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_icons_People__WEBPACK_IMPORTED_MODULE_5__.default, {})
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
@@ -21185,7 +21185,7 @@ function AdminDashboard() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "flex items-center p-4 bg-white rounded-lg shadow-xs",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "p-3 mr-4 text-gray-500 bg-gray-100 rounded-full",
+            className: "p-3 mr-4 text-blue-500 bg-gray-100 rounded-full",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_icons_People__WEBPACK_IMPORTED_MODULE_5__.default, {})
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
@@ -21199,7 +21199,7 @@ function AdminDashboard() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "flex items-center p-4 bg-white rounded-lg shadow-xs",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "p-3 mr-4 text-gray-500 bg-gray-100 rounded-full",
+            className: "p-3 mr-4 bg-gray-100 rounded-full text-fuchsia-500",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_icons_People__WEBPACK_IMPORTED_MODULE_5__.default, {})
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
@@ -21213,7 +21213,7 @@ function AdminDashboard() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "flex items-center p-4 bg-white rounded-lg shadow-xs",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "p-3 mr-4 text-gray-500 bg-gray-100 rounded-full",
+            className: "p-3 mr-4 text-teal-500 bg-gray-100 rounded-full",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_icons_People__WEBPACK_IMPORTED_MODULE_5__.default, {})
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
@@ -21264,17 +21264,14 @@ function AdminHeader(_ref) {
         className: "flex items-center justify-between h-16 -mb-px",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "flex",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
             className: "text-gray-500 hover:text-gray-600 lg:hidden",
             "aria-controls": "sidebar",
             "aria-expanded": sidebarOpen,
             onClick: function onClick() {
               return setSidebarOpen(true);
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-              className: "sr-only",
-              children: "Open sidebar"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("svg", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("svg", {
               className: "w-6 h-6 fill-current",
               viewBox: "0 0 24 24",
               xmlns: "http://www.w3.org/2000/svg",
@@ -21294,7 +21291,7 @@ function AdminHeader(_ref) {
                 width: "16",
                 height: "2"
               })]
-            })]
+            })
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "flex items-center",
@@ -21676,10 +21673,20 @@ function AdminSidebar(_ref) {
             "in": appointmentDropdown,
             timeout: "auto",
             unmountOnExit: true,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_5__.default, {
               component: "div",
               disablePadding: true,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_6__.default, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_6__.default, {
+                component: _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.InertiaLink,
+                href: "/adminAddUser",
+                button: true,
+                className: classes.nested,
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons__WEBPACK_IMPORTED_MODULE_13__.default, {
+                  className: classes.listIcons
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_8__.default, {
+                  primary: "Add User"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_6__.default, {
                 component: _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.InertiaLink,
                 href: "/adminChangeRole",
                 button: true,
@@ -21689,7 +21696,7 @@ function AdminSidebar(_ref) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_8__.default, {
                   primary: "Change Role"
                 })]
-              })
+              })]
             })
           })]
         })]
@@ -21718,6 +21725,236 @@ var useStlyes = (0,_material_ui_core__WEBPACK_IMPORTED_MODULE_14__.default)({
     color: "blue"
   }
 });
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Admin/adminUser/AddUser/AddUser.jsx":
+/*!****************************************************************!*\
+  !*** ./resources/js/Pages/Admin/adminUser/AddUser/AddUser.jsx ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _AdminLayout_AdminLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../AdminLayout/AdminLayout */ "./resources/js/Pages/Admin/AdminLayout/AdminLayout.jsx");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _material_ui_core_Select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/core/Select */ "./node_modules/@material-ui/core/esm/Select/Select.js");
+/* harmony import */ var _material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/InputLabel */ "./node_modules/@material-ui/core/esm/InputLabel/InputLabel.js");
+/* harmony import */ var _material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/FormControl */ "./node_modules/@material-ui/core/esm/FormControl/FormControl.js");
+/* harmony import */ var _material_ui_core_FormHelperText__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/core/FormHelperText */ "./node_modules/@material-ui/core/esm/FormHelperText/FormHelperText.js");
+/* harmony import */ var _material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core/MenuItem */ "./node_modules/@material-ui/core/esm/MenuItem/MenuItem.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function AddUser() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    name: "",
+    email: "",
+    role: "",
+    password: "",
+    confirmPassword: ""
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      addUserForm = _useState2[0],
+      setAddUserForm = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
+      _useState4 = _slicedToArray(_useState3, 2),
+      errors = _useState4[0],
+      setErrors = _useState4[1];
+
+  function handleFormChange(e) {
+    setAddUserForm(_objectSpread(_objectSpread({}, addUserForm), {}, _defineProperty({}, e.target.id, e.target.value)));
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    axios__WEBPACK_IMPORTED_MODULE_2___default().post("/adminAddUserSubmit", addUserForm).then(function () {
+      // reset the input fields
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("password").value = "";
+      document.getElementById("confirmPassword").value = "";
+    }).then(function () {
+      react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.success("User Saved"); // reset the addUserForm(state)
+
+      setAddUserForm(_objectSpread(_objectSpread({}, addUserForm), {}, {
+        name: "",
+        email: "",
+        role: "",
+        password: "",
+        confirmPassword: ""
+      }));
+    })["catch"](function (error) {
+      if (error.response) {
+        setErrors(error.response.data.errors);
+      }
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_AdminLayout_AdminLayout__WEBPACK_IMPORTED_MODULE_1__.default, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "header",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "header-text",
+          children: "Add User"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("form", {
+        onSubmit: handleFormSubmit,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "flex flex-col flex-wrap",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: "flex justify-end w-full px-2 mb-3",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__.default, {
+              type: "submit",
+              variant: "contained",
+              color: "primary",
+              children: "Submit"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
+              id: "name",
+              label: "Name",
+              style: {
+                margin: 8
+              },
+              placeholder: "Name",
+              fullWidth: true,
+              margin: "normal",
+              InputLabelProps: {
+                shrink: true
+              },
+              variant: "outlined",
+              onChange: handleFormChange,
+              error: errors ? errors.name ? true : false : false,
+              helperText: "".concat(errors ? errors.name ? errors.name : "" : "")
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
+              label: "Email",
+              id: "email",
+              placeholder: "Email",
+              className: "mx-2 w-[35ch] md:w-[50ch]",
+              margin: "normal",
+              variant: "outlined",
+              onChange: handleFormChange,
+              error: errors ? errors.email ? true : false : false,
+              helperText: "".concat(errors ? errors.email ? errors.email : "" : "")
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_7__.default, {
+              variant: "outlined",
+              className: "m-2 min-w-[120px]",
+              error: errors ? errors.role ? true : false : false,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_8__.default, {
+                id: "roleInputLabel",
+                children: "Role"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_material_ui_core_Select__WEBPACK_IMPORTED_MODULE_9__.default, {
+                labelId: "Role",
+                id: "roleId",
+                value: addUserForm.role,
+                onChange: function onChange(e) {
+                  return setAddUserForm(_objectSpread(_objectSpread({}, addUserForm), {}, {
+                    role: e.target.value
+                  }));
+                },
+                label: "Role",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_10__.default, {
+                  value: "patient",
+                  children: "Patient"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_10__.default, {
+                  value: "nurse",
+                  children: "Nurse"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_10__.default, {
+                  value: "doctor",
+                  children: "Doctor"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_10__.default, {
+                  value: "lab",
+                  children: "Lab"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_10__.default, {
+                  value: "pharmacy",
+                  children: "Pharmacy"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_10__.default, {
+                  value: "admin",
+                  children: "Admin"
+                })]
+              }), errors ? errors.role ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_FormHelperText__WEBPACK_IMPORTED_MODULE_11__.default, {
+                children: errors.role
+              }) : null : null]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
+              label: "Password",
+              id: "password",
+              placeholder: "Password",
+              className: "mx-2 w-[35ch] md:w-[50ch]",
+              type: "password",
+              margin: "normal",
+              variant: "outlined",
+              onChange: handleFormChange,
+              error: errors ? errors.password ? true : false : false,
+              helperText: "".concat(errors ? errors.password ? errors.password : "" : "")
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
+              label: "Confirm Password",
+              id: "confirmPassword",
+              placeholder: "Confirm Password",
+              className: "mx-2 w-[35ch] md:w-[50ch]",
+              type: "password",
+              margin: "normal",
+              variant: "outlined",
+              onChange: handleFormChange,
+              error: errors ? errors.password ? true : false : false,
+              helperText: "".concat(errors ? errors.password ? errors.password : "" : "")
+            })
+          })]
+        })
+      })]
+    })
+  });
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AddUser);
 
 /***/ }),
 
@@ -30345,17 +30582,17 @@ function NurseAddPatient() {
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    axios__WEBPACK_IMPORTED_MODULE_2___default().post('/nurseAddPatientSubmit', addPatientForm).then(function () {
+    axios__WEBPACK_IMPORTED_MODULE_2___default().post("/nurseAddPatientSubmit", addPatientForm).then(function () {
       // reset the input fields
-      document.getElementById('name').value = "";
-      document.getElementById('patientId').value = "";
-      document.getElementById('age').value = "";
-      document.getElementById('phoneNo').value = "";
-      document.getElementById('email').value = "";
-      document.getElementById('stateOfOrigin').value = "";
-      document.getElementById('lgaOfOrigin').value = "";
-      document.getElementById('residentialState').value = "";
-      document.getElementById('residentialLga').value = "";
+      document.getElementById("name").value = "";
+      document.getElementById("patientId").value = "";
+      document.getElementById("age").value = "";
+      document.getElementById("phoneNo").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("stateOfOrigin").value = "";
+      document.getElementById("lgaOfOrigin").value = "";
+      document.getElementById("residentialState").value = "";
+      document.getElementById("residentialLga").value = "";
       setErrors(null);
     }).then(function () {
       // reset the addPatientForm(state)
@@ -30371,7 +30608,9 @@ function NurseAddPatient() {
         residentialLga: ""
       }));
     })["catch"](function (error) {
-      setErrors(error.response.data.errors);
+      if (error.response) {
+        setErrors(error.response.data.errors);
+      }
     });
   }
 
@@ -34102,7 +34341,7 @@ function Welcome(_ref) {
   var authRole = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.usePage)().props.user ? (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.usePage)().props.user.role : false;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "h-screen bg-gray-800",
+      className: "h-screen bg-blueGray-800",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("section", {
         className: "flex items-center pt-4 ml-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
@@ -101079,6 +101318,8 @@ var map = {
 	"./Admin/AdminLayout/AdminLayout.jsx": "./resources/js/Pages/Admin/AdminLayout/AdminLayout.jsx",
 	"./Admin/AdminLayout/AdminSidebar": "./resources/js/Pages/Admin/AdminLayout/AdminSidebar.jsx",
 	"./Admin/AdminLayout/AdminSidebar.jsx": "./resources/js/Pages/Admin/AdminLayout/AdminSidebar.jsx",
+	"./Admin/adminUser/AddUser/AddUser": "./resources/js/Pages/Admin/adminUser/AddUser/AddUser.jsx",
+	"./Admin/adminUser/AddUser/AddUser.jsx": "./resources/js/Pages/Admin/adminUser/AddUser/AddUser.jsx",
 	"./Admin/adminUser/ChangeRole/ChangeRole": "./resources/js/Pages/Admin/adminUser/ChangeRole/ChangeRole.jsx",
 	"./Admin/adminUser/ChangeRole/ChangeRole.jsx": "./resources/js/Pages/Admin/adminUser/ChangeRole/ChangeRole.jsx",
 	"./Doctors/DoctorDashboard": "./resources/js/Pages/Doctors/DoctorDashboard.jsx",
