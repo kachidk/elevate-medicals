@@ -111,7 +111,18 @@ function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
             </ListItem>
             <Collapse in={appointmentDropdown} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
-                {/* today appointment */}
+                {/* add user */}
+                <ListItem
+                  component={InertiaLink}
+                  href="/adminAddUser"
+                  button
+                  className={classes.nested}
+                >
+                  <Remove className={classes.listIcons} />
+                  <ListItemText primary="Add User" />
+                </ListItem>
+
+                {/* change role */}
                 <ListItem
                   component={InertiaLink}
                   href="/adminChangeRole"

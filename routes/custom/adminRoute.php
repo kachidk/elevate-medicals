@@ -10,7 +10,8 @@ Route::get('/adminChangeRole', [AdminUserController::class, 'changeRolePage']);
 Route::get('/adminFetchRole', [AdminUserController::class, 'fetchRoles']);
 Route::post('adminUpdateRoleSubmit', [AdminUserController::class, 'updateRoleSubmit']);
 Route::get('adminUsersCount', [AdminController::class, 'usersCount']);
-
+Route::get('/adminAddUser', [AdminUserController::class,'addUserIndex']);
+Route::post('/adminAddUserSubmit', [AdminUserController::class, 'addUserSubmit']);
 
 
 // route commands

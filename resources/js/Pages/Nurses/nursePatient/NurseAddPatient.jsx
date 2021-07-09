@@ -31,40 +31,43 @@ function NurseAddPatient() {
     });
   }
 
-  function handleFormSubmit(e){
+  function handleFormSubmit(e) {
     e.preventDefault();
-    axios.post('/nurseAddPatientSubmit',addPatientForm)
-          .then(()=>{
-            // reset the input fields
-              document.getElementById('name').value = "";
-              document.getElementById('patientId').value = "";
-              document.getElementById('age').value = "";
-              document.getElementById('phoneNo').value = "";
-              document.getElementById('email').value = "";
-              document.getElementById('stateOfOrigin').value = "";
-              document.getElementById('lgaOfOrigin').value = "";
-              document.getElementById('residentialState').value = "";
-              document.getElementById('residentialLga').value = "";
-            setErrors(null)
-          })
-          .then(()=>{
-            // reset the addPatientForm(state)
-            setAddPatientForm({
-              ...addPatientForm,
-              name: "",
-              patientId: "",
-              age: "",
-              phoneNo: "",
-              email: "",
-              stateOfOrigin: "",
-              lgaOfOrigin: "",
-              residentialState: "",
-              residentialLga: "",
-            })
-          })
-          .catch((error)=>{
-            setErrors(error.response.data.errors)
-          });
+    axios
+      .post("/nurseAddPatientSubmit", addPatientForm)
+      .then(() => {
+        // reset the input fields
+        document.getElementById("name").value = "";
+        document.getElementById("patientId").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("phoneNo").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("stateOfOrigin").value = "";
+        document.getElementById("lgaOfOrigin").value = "";
+        document.getElementById("residentialState").value = "";
+        document.getElementById("residentialLga").value = "";
+        setErrors(null);
+      })
+      .then(() => {
+        // reset the addPatientForm(state)
+        setAddPatientForm({
+          ...addPatientForm,
+          name: "",
+          patientId: "",
+          age: "",
+          phoneNo: "",
+          email: "",
+          stateOfOrigin: "",
+          lgaOfOrigin: "",
+          residentialState: "",
+          residentialLga: "",
+        });
+      })
+      .catch((error) => {
+        if (error.response) {
+          setErrors(error.response.data.errors);
+        }
+      });
   }
   return (
     <div>
@@ -93,7 +96,7 @@ function NurseAddPatient() {
                 }}
                 variant="outlined"
                 onChange={handleFormChange}
-                error={errors ? (errors.name ? true:false) :false }
+                error={errors ? (errors.name ? true : false) : false}
                 helperText={`${errors ? (errors.name ? errors.name : "") : ""}`}
               />
             </div>
@@ -106,8 +109,10 @@ function NurseAddPatient() {
                 margin="normal"
                 variant="outlined"
                 onChange={handleFormChange}
-                error={errors ? (errors.patientId ? true:false) :false }
-                helperText={`${errors ? (errors.patientId ? errors.patientId : "") : ""}`}
+                error={errors ? (errors.patientId ? true : false) : false}
+                helperText={`${
+                  errors ? (errors.patientId ? errors.patientId : "") : ""
+                }`}
               />
             </div>
             <div>
@@ -120,7 +125,7 @@ function NurseAddPatient() {
                 margin="normal"
                 variant="outlined"
                 onChange={handleFormChange}
-                error={errors ? (errors.age ? true:false) :false }
+                error={errors ? (errors.age ? true : false) : false}
                 helperText={`${errors ? (errors.age ? errors.age : "") : ""}`}
               />
             </div>
@@ -133,8 +138,10 @@ function NurseAddPatient() {
                 margin="normal"
                 variant="outlined"
                 onChange={handleFormChange}
-                error={errors ? (errors.phoneNo ? true:false) :false }
-                helperText={`${errors ? (errors.phoneNo ? errors.phoneNo : "") : ""}`}
+                error={errors ? (errors.phoneNo ? true : false) : false}
+                helperText={`${
+                  errors ? (errors.phoneNo ? errors.phoneNo : "") : ""
+                }`}
               />
               <TextField
                 label="Email"
@@ -144,8 +151,10 @@ function NurseAddPatient() {
                 margin="normal"
                 variant="outlined"
                 onChange={handleFormChange}
-                error={errors ? (errors.email ? true:false) :false }
-                helperText={`${errors ? (errors.email ? errors.email : "") : ""}`}
+                error={errors ? (errors.email ? true : false) : false}
+                helperText={`${
+                  errors ? (errors.email ? errors.email : "") : ""
+                }`}
               />
             </div>
             <div>
@@ -158,8 +167,14 @@ function NurseAddPatient() {
                 margin="normal"
                 variant="outlined"
                 onChange={handleFormChange}
-                error={errors ? (errors.stateOfOrigin ? true:false) :false }
-                helperText={`${errors ? (errors.stateOfOrigin ? errors.stateOfOrigin : "") : ""}`}
+                error={errors ? (errors.stateOfOrigin ? true : false) : false}
+                helperText={`${
+                  errors
+                    ? errors.stateOfOrigin
+                      ? errors.stateOfOrigin
+                      : ""
+                    : ""
+                }`}
               />
               <TextField
                 label="L.G.A of Origin"
@@ -169,8 +184,10 @@ function NurseAddPatient() {
                 margin="normal"
                 variant="outlined"
                 onChange={handleFormChange}
-                error={errors ? (errors.lgaOfOrigin ? true:false) :false }
-                helperText={`${errors ? (errors.lgaOfOrigin ? errors.lgaOfOrigin : "") : ""}`}
+                error={errors ? (errors.lgaOfOrigin ? true : false) : false}
+                helperText={`${
+                  errors ? (errors.lgaOfOrigin ? errors.lgaOfOrigin : "") : ""
+                }`}
               />
             </div>
             <div>
@@ -182,8 +199,16 @@ function NurseAddPatient() {
                 margin="normal"
                 variant="outlined"
                 onChange={handleFormChange}
-                error={errors ? (errors.residentialState ? true:false) :false }
-                helperText={`${errors ? (errors.residentialState ? errors.residentialState : "") : ""}`}
+                error={
+                  errors ? (errors.residentialState ? true : false) : false
+                }
+                helperText={`${
+                  errors
+                    ? errors.residentialState
+                      ? errors.residentialState
+                      : ""
+                    : ""
+                }`}
               />
               <TextField
                 label="Residential L.G.A"
@@ -193,8 +218,14 @@ function NurseAddPatient() {
                 margin="normal"
                 variant="outlined"
                 onChange={handleFormChange}
-                error={errors ? (errors.residentialLga ? true:false) :false }
-                helperText={`${errors ? (errors.residentialLga ? errors.residentialLga : "") : ""}`}
+                error={errors ? (errors.residentialLga ? true : false) : false}
+                helperText={`${
+                  errors
+                    ? errors.residentialLga
+                      ? errors.residentialLga
+                      : ""
+                    : ""
+                }`}
               />
             </div>
           </div>
