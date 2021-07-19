@@ -28804,20 +28804,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var columns = [{
-  id: 'name',
-  label: 'Name',
+  id: "name",
+  label: "Name",
   minWidth: 170
 }, {
-  id: 'patientId',
-  label: 'Patient ID',
+  id: "patientId",
+  label: "Patient ID",
   minWidth: 100
 }, {
-  id: 'age',
-  label: 'Age',
+  id: "age",
+  label: "Age",
   minWidth: 170
 }, {
-  id: 'phoneNo',
-  label: 'Phone No.',
+  id: "phoneNo",
+  label: "Phone No.",
   minWidth: 170
 }];
 
@@ -28831,7 +28831,7 @@ function NurseAddAppointment() {
       patientData = _useState2[0],
       setPatientData = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       searchState = _useState4[0],
       setSearchState = _useState4[1];
@@ -28846,7 +28846,7 @@ function NurseAddAppointment() {
     axios__WEBPACK_IMPORTED_MODULE_2___default().get("nurseViewPatientData", {
       params: {
         page: pageNumber,
-        searchValue: searchState.length >= 4 ? searchState : ''
+        searchValue: searchState.length >= 4 ? searchState : ""
       }
     }).then(function (res) {
       setPatientData(res.data);
@@ -28877,7 +28877,7 @@ function NurseAddAppointment() {
     }).then(function (res) {
       setPatientInfo(res.data);
     })["catch"](function (err) {
-      alert('errors :', err.response.data.errors);
+      alert("errors :", err.response.data.errors);
     });
   }
 
@@ -28896,7 +28896,7 @@ function NurseAddAppointment() {
           id: "patientId",
           placeholder: "Search (min 4 letters)",
           className: classes.searchTextField,
-          helperText: "Some important text",
+          helperText: "Search (min 4 letters)",
           margin: "normal",
           variant: "outlined",
           onChange: function onChange(e) {
@@ -28971,14 +28971,14 @@ function NurseAddAppointment() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NurseAddAppointment);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_14__.default)({
   searchTextField: {
-    width: '100%',
-    maxWidth: '400px'
+    width: "100%",
+    maxWidth: "400px"
   },
   table: {
-    width: '100%'
+    width: "100%"
   },
   container: {
-    maxHeight: '440px'
+    maxHeight: "440px"
   }
 });
 
@@ -29040,20 +29040,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var columns = [{
-  id: 'name',
-  label: 'Name',
+  id: "name",
+  label: "Name",
   minWidth: 170
 }, {
-  id: 'patientId',
-  label: 'Patient ID',
+  id: "patientId",
+  label: "Patient ID",
   minWidth: 100
 }, {
-  id: 'age',
-  label: 'Age',
+  id: "age",
+  label: "Age",
   minWidth: 170
 }, {
-  id: 'status',
-  label: 'Status',
+  id: "status",
+  label: "Status",
   minWidth: 170
 }];
 
@@ -29065,7 +29065,7 @@ function CompletedAllAppointment() {
       completedData = _useState2[0],
       setCompletedData = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       searchState = _useState4[0],
       setSearchState = _useState4[1];
@@ -29082,7 +29082,7 @@ function CompletedAllAppointment() {
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("nurseAllCompletedAppointment", {
       params: {
         page: pageNumber,
-        searchValue: searchState.length >= 4 ? searchState : ''
+        searchValue: searchState.length >= 4 ? searchState : ""
       }
     }).then(function (res) {
       setCompletedData(res.data);
@@ -29128,9 +29128,8 @@ function CompletedAllAppointment() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Search",
         id: "patientId",
-        placeholder: "Search (min 4 letters)" // className={classes.textField}
-        ,
-        helperText: "Some important text",
+        placeholder: "Search (min 4 letters)",
+        helperText: "Search (min 4 letters)",
         margin: "normal",
         variant: "outlined",
         onChange: function onChange(e) {
@@ -29194,7 +29193,7 @@ function CompletedAllAppointment() {
           onChange: function onChange(pageNumber) {
             return fetchData(pageNumber);
           }
-        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "flex text-blue-500"), _defineProperty(_jsx2, "itemClassPrev", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"), _defineProperty(_jsx2, "itemClassNext", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer ml-2"), _defineProperty(_jsx2, "itemClass", "px-4 py-1 border cursor-pointer"), _defineProperty(_jsx2, "itemClassLast", "ml-1 hidden md:inline-flex"), _defineProperty(_jsx2, "itemClassFirst", "mr-1 hidden md:inline-flex"), _defineProperty(_jsx2, "activeClass", "bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer"), _defineProperty(_jsx2, "firstPageText", "First"), _defineProperty(_jsx2, "lastPageText", "Last"), _jsx2))
+        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "inline-flex items-center text-gray-700"), _defineProperty(_jsx2, "itemClassPrev", "mr-2"), _defineProperty(_jsx2, "itemClassNext", "ml-2"), _defineProperty(_jsx2, "itemClass", "px-3 py-1 rounded-md cursor-pointer"), _defineProperty(_jsx2, "hideFirstLastPages", true), _defineProperty(_jsx2, "activeClass", "text-white bg-blue-600 border border-blue-600"), _jsx2))
       }), completedInfo && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AllCompletedInfo__WEBPACK_IMPORTED_MODULE_3__.default, {
         open: completedInfo,
         onClose: setCompletedInfo,
@@ -29207,7 +29206,7 @@ function CompletedAllAppointment() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CompletedAllAppointment);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
   root: {
-    width: '100%'
+    width: "100%"
   },
   container: {
     maxHeight: 440
@@ -29381,20 +29380,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var columns = [{
-  id: 'name',
-  label: 'Name',
+  id: "name",
+  label: "Name",
   minWidth: 170
 }, {
-  id: 'patientId',
-  label: 'Patient ID',
+  id: "patientId",
+  label: "Patient ID",
   minWidth: 100
 }, {
-  id: 'age',
-  label: 'Age',
+  id: "age",
+  label: "Age",
   minWidth: 170
 }, {
-  id: 'status',
-  label: 'Status',
+  id: "status",
+  label: "Status",
   minWidth: 170
 }];
 
@@ -29406,7 +29405,7 @@ function OngoingAllAppointment() {
       ongoingData = _useState2[0],
       setOngoingData = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       searchState = _useState4[0],
       setSearchState = _useState4[1];
@@ -29423,7 +29422,7 @@ function OngoingAllAppointment() {
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("nurseAllOngoingAppointment", {
       params: {
         page: pageNumber,
-        searchValue: searchState.length >= 4 ? searchState : ''
+        searchValue: searchState.length >= 4 ? searchState : ""
       }
     }).then(function (res) {
       setOngoingData(res.data);
@@ -29469,9 +29468,8 @@ function OngoingAllAppointment() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Search",
         id: "patientId",
-        placeholder: "Search (min 4 letters)" // className={classes.textField}
-        ,
-        helperText: "Some important text",
+        placeholder: "Search (min 4 letters)",
+        helperText: "Search (min 4 letters)",
         margin: "normal",
         variant: "outlined",
         onChange: function onChange(e) {
@@ -29535,7 +29533,7 @@ function OngoingAllAppointment() {
           onChange: function onChange(pageNumber) {
             return fetchData(pageNumber);
           }
-        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "flex text-blue-500"), _defineProperty(_jsx2, "itemClassPrev", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"), _defineProperty(_jsx2, "itemClassNext", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer ml-2"), _defineProperty(_jsx2, "itemClass", "px-4 py-1 border cursor-pointer"), _defineProperty(_jsx2, "itemClassLast", "ml-1 hidden md:inline-flex"), _defineProperty(_jsx2, "itemClassFirst", "mr-1 hidden md:inline-flex"), _defineProperty(_jsx2, "activeClass", "bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer"), _defineProperty(_jsx2, "firstPageText", "First"), _defineProperty(_jsx2, "lastPageText", "Last"), _jsx2))
+        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "inline-flex items-center text-gray-700"), _defineProperty(_jsx2, "itemClassPrev", "mr-2"), _defineProperty(_jsx2, "itemClassNext", "ml-2"), _defineProperty(_jsx2, "itemClass", "px-3 py-1 rounded-md cursor-pointer"), _defineProperty(_jsx2, "hideFirstLastPages", true), _defineProperty(_jsx2, "activeClass", "text-white bg-blue-600 border border-blue-600"), _jsx2))
       }), ongoingInfo && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_AllOngoingInfo__WEBPACK_IMPORTED_MODULE_3__.default, {
         open: ongoingInfo,
         onClose: setOngoingInfo,
@@ -29548,7 +29546,7 @@ function OngoingAllAppointment() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OngoingAllAppointment);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
   root: {
-    width: '100%'
+    width: "100%"
   },
   container: {
     maxHeight: 440
@@ -29801,20 +29799,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var columns = [{
-  id: 'name',
-  label: 'Name',
+  id: "name",
+  label: "Name",
   minWidth: 170
 }, {
-  id: 'patientId',
-  label: 'Patient ID',
+  id: "patientId",
+  label: "Patient ID",
   minWidth: 100
 }, {
-  id: 'age',
-  label: 'Age',
+  id: "age",
+  label: "Age",
   minWidth: 170
 }, {
-  id: 'status',
-  label: 'Status',
+  id: "status",
+  label: "Status",
   minWidth: 170
 }];
 
@@ -29826,7 +29824,7 @@ function CompletedTodayAppointment() {
       completedData = _useState2[0],
       setCompletedData = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       searchState = _useState4[0],
       setSearchState = _useState4[1];
@@ -29843,7 +29841,7 @@ function CompletedTodayAppointment() {
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("nurseTodayCompletedAppointment", {
       params: {
         page: pageNumber,
-        searchValue: searchState.length >= 4 ? searchState : ''
+        searchValue: searchState.length >= 4 ? searchState : ""
       }
     }).then(function (res) {
       setCompletedData(res.data);
@@ -29890,8 +29888,8 @@ function CompletedTodayAppointment() {
         label: "Search",
         id: "patientId",
         placeholder: "Search (min 4 letters)",
-        helperText: searchState.length < 4 && searchState != '' ? 'Please input at least 4 characters' : '',
-        error: searchState.length < 4 && searchState != '' ? true : false,
+        helperText: searchState.length < 4 && searchState != "" ? "Please input at least 4 characters" : "",
+        error: searchState.length < 4 && searchState != "" ? true : false,
         margin: "normal",
         variant: "outlined",
         onChange: function onChange(e) {
@@ -29955,7 +29953,7 @@ function CompletedTodayAppointment() {
           onChange: function onChange(pageNumber) {
             return fetchCompletedData(pageNumber);
           }
-        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "flex text-blue-500"), _defineProperty(_jsx2, "itemClassPrev", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer mr-2"), _defineProperty(_jsx2, "itemClassNext", "px-4 bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer ml-2"), _defineProperty(_jsx2, "itemClass", "px-4 py-1 border cursor-pointer"), _defineProperty(_jsx2, "itemClassLast", "ml-1 hidden md:inline-flex"), _defineProperty(_jsx2, "itemClassFirst", "mr-1 hidden md:inline-flex"), _defineProperty(_jsx2, "activeClass", "bg-blue-500 text-white border border-blue-500 hover:bg-blue-400 hover:border-blue-400 cursor-pointer"), _defineProperty(_jsx2, "firstPageText", "First"), _defineProperty(_jsx2, "lastPageText", "Last"), _jsx2))
+        }, _defineProperty(_jsx2, "pageRangeDisplayed", screen.width < 768 ? 3 : 5), _defineProperty(_jsx2, "innerClass", "inline-flex items-center text-gray-700"), _defineProperty(_jsx2, "itemClassPrev", "mr-2"), _defineProperty(_jsx2, "itemClassNext", "ml-2"), _defineProperty(_jsx2, "itemClass", "px-3 py-1 rounded-md cursor-pointer"), _defineProperty(_jsx2, "hideFirstLastPages", true), _defineProperty(_jsx2, "activeClass", "text-white bg-blue-600 border border-blue-600"), _jsx2))
       }), completedInfo && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_CompletedTodayInfo__WEBPACK_IMPORTED_MODULE_3__.default, {
         open: completedInfo,
         onClose: setCompletedInfo,
@@ -29968,7 +29966,7 @@ function CompletedTodayAppointment() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CompletedTodayAppointment);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
   root: {
-    width: '100%'
+    width: "100%"
   },
   container: {
     maxHeight: 440
@@ -30518,11 +30516,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _NurseLayout_NurseLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../NurseLayout/NurseLayout */ "./resources/js/Pages/Nurses/NurseLayout/NurseLayout.jsx");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/makeStyles.js");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/makeStyles.js");
+/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/TextField */ "./node_modules/@material-ui/core/esm/TextField/TextField.js");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/Button.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
@@ -30541,6 +30540,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -30594,6 +30594,7 @@ function NurseAddPatient() {
       document.getElementById("residentialState").value = "";
       document.getElementById("residentialLga").value = "";
       setErrors(null);
+      react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.success("Patient Saved");
     }).then(function () {
       // reset the addPatientForm(state)
       setAddPatientForm(_objectSpread(_objectSpread({}, addPatientForm), {}, {
@@ -30628,14 +30629,14 @@ function NurseAddPatient() {
           className: classes.root,
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "flex justify-end w-full px-2 mb-3",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__.default, {
               type: "submit",
               variant: "contained",
               color: "primary",
               children: "Submit"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
               id: "name",
               label: "Name",
               style: {
@@ -30653,7 +30654,7 @@ function NurseAddPatient() {
               helperText: "".concat(errors ? errors.name ? errors.name : "" : "")
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
               label: "Patient ID",
               id: "patientId",
               placeholder: "Patient ID",
@@ -30665,7 +30666,7 @@ function NurseAddPatient() {
               helperText: "".concat(errors ? errors.patientId ? errors.patientId : "" : "")
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
               label: "Age",
               id: "age",
               placeholder: "Age",
@@ -30678,7 +30679,7 @@ function NurseAddPatient() {
               helperText: "".concat(errors ? errors.age ? errors.age : "" : "")
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
               label: "Phone No.",
               id: "phoneNo",
               placeholder: "Phone No.",
@@ -30688,7 +30689,7 @@ function NurseAddPatient() {
               onChange: handleFormChange,
               error: errors ? errors.phoneNo ? true : false : false,
               helperText: "".concat(errors ? errors.phoneNo ? errors.phoneNo : "" : "")
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
               label: "Email",
               id: "email",
               placeholder: "Email",
@@ -30700,7 +30701,7 @@ function NurseAddPatient() {
               helperText: "".concat(errors ? errors.email ? errors.email : "" : "")
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, _defineProperty({
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, _defineProperty({
               label: "State of Origin",
               id: "stateOfOrigin",
               placeholder: "State of Origin",
@@ -30710,7 +30711,7 @@ function NurseAddPatient() {
               variant: "outlined",
               onChange: handleFormChange,
               error: errors ? errors.stateOfOrigin ? true : false : false
-            }, "helperText", "".concat(errors ? errors.stateOfOrigin ? errors.stateOfOrigin : "" : ""))), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+            }, "helperText", "".concat(errors ? errors.stateOfOrigin ? errors.stateOfOrigin : "" : ""))), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
               label: "L.G.A of Origin",
               id: "lgaOfOrigin",
               placeholder: "L.G.A of Origin",
@@ -30722,7 +30723,7 @@ function NurseAddPatient() {
               helperText: "".concat(errors ? errors.lgaOfOrigin ? errors.lgaOfOrigin : "" : "")
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
               label: "Residential State",
               id: "residentialState",
               placeholder: "Residential State",
@@ -30732,7 +30733,7 @@ function NurseAddPatient() {
               onChange: handleFormChange,
               error: errors ? errors.residentialState ? true : false : false,
               helperText: "".concat(errors ? errors.residentialState ? errors.residentialState : "" : "")
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
               label: "Residential L.G.A",
               id: "residentialLga",
               placeholder: "Residential L.G.A",
@@ -30751,7 +30752,7 @@ function NurseAddPatient() {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NurseAddPatient);
-var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_6__.default)(function (theme) {
+var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_7__.default)(function (theme) {
   return {
     root: {
       display: "flex",
@@ -30834,20 +30835,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var columns = [{
-  id: 'name',
-  label: 'Name',
+  id: "name",
+  label: "Name",
   minWidth: 170
 }, {
-  id: 'patientId',
-  label: 'Patient ID',
+  id: "patientId",
+  label: "Patient ID",
   minWidth: 100
 }, {
-  id: 'age',
-  label: 'Age',
+  id: "age",
+  label: "Age",
   minWidth: 170
 }, {
-  id: 'phoneNo',
-  label: 'Phone No.',
+  id: "phoneNo",
+  label: "Phone No.",
   minWidth: 170
 }];
 
@@ -30860,7 +30861,7 @@ function NurseViewPatient() {
       patientData = _useState2[0],
       setPatientData = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       searchState = _useState4[0],
       setSearchState = _useState4[1];
@@ -30877,7 +30878,7 @@ function NurseViewPatient() {
     axios__WEBPACK_IMPORTED_MODULE_2___default().get("nurseViewPatientData", {
       params: {
         page: pageNumber,
-        searchValue: searchState.length >= 4 ? searchState : ''
+        searchValue: searchState.length >= 4 ? searchState : ""
       }
     }).then(function (res) {
       setPatientData(res.data);
@@ -30904,7 +30905,7 @@ function NurseViewPatient() {
     }).then(function (res) {
       setPatientInfo(res.data);
     })["catch"](function (err) {
-      alert('errors :', err.response.data.errors);
+      alert("errors :", err.response.data.errors);
     });
   }
 
@@ -30921,9 +30922,7 @@ function NurseViewPatient() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_6__.default, {
           label: "Search",
           id: "patientId",
-          placeholder: "Search (min 4 letters)" // className={classes.textField}
-          ,
-          helperText: "Some important text",
+          placeholder: "Search (min 4 letters)",
           margin: "normal",
           variant: "outlined",
           onChange: function onChange(e) {
@@ -30998,7 +30997,7 @@ function NurseViewPatient() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NurseViewPatient);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_14__.default)({
   root: {
-    width: '100%'
+    width: "100%"
   },
   container: {
     maxHeight: 440

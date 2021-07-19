@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 function NurseAddPatient() {
   const [addPatientForm, setAddPatientForm] = useState({
@@ -47,6 +48,7 @@ function NurseAddPatient() {
         document.getElementById("residentialState").value = "";
         document.getElementById("residentialLga").value = "";
         setErrors(null);
+        toast.success("Patient Saved");
       })
       .then(() => {
         // reset the addPatientForm(state)

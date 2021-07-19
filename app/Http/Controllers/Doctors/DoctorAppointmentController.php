@@ -112,9 +112,9 @@ class DoctorAppointmentController extends Controller
         $req->validate([
             'patientComplain' => 'required',
             'diagnosis' => 'required',
-            'prescriptionStatus' => 'required, boolean',
+            'prescriptionStatus' => 'required',
             'prescription' => 'required',
-            'labTest' => 'required, boolean',
+            'labTest' => 'required',
             'admit' => 'required'
         ]);
         $appointment = Appointment::find($req->appointmentId);
