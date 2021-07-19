@@ -23218,7 +23218,7 @@ function AllAppointment() {
         className: "header",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: "header-text",
-          children: "Today's Appointment"
+          children: "All Appointment"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: "space-x-3",
@@ -23412,20 +23412,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var columns = [{
-  id: 'name',
-  label: 'Name',
+  id: "name",
+  label: "Name",
   minWidth: 170
 }, {
-  id: 'patientId',
-  label: 'Patient ID',
+  id: "patientId",
+  label: "Patient ID",
   minWidth: 100
 }, {
-  id: 'age',
-  label: 'Age',
+  id: "age",
+  label: "Age",
   minWidth: 170
 }, {
-  id: 'status',
-  label: 'Status',
+  id: "status",
+  label: "Status",
   minWidth: 170
 }];
 
@@ -23437,7 +23437,7 @@ function CompletedAppointment() {
       completedData = _useState2[0],
       setCompletedData = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       searchState = _useState4[0],
       setSearchState = _useState4[1];
@@ -23454,7 +23454,7 @@ function CompletedAppointment() {
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorAllCompletedAppointment", {
       params: {
         page: pageNumber,
-        searchValue: searchState.length >= 4 ? searchState : ''
+        searchValue: searchState.length >= 4 ? searchState : ""
       }
     }).then(function (res) {
       setCompletedData(res.data);
@@ -23500,9 +23500,8 @@ function CompletedAppointment() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Search",
         id: "patientId",
-        placeholder: "Search (min 4 letters)" // className={classes.textField}
-        ,
-        helperText: "Some important text",
+        placeholder: "Search (min 4 letters)",
+        helperText: "Search (min 4 letters)",
         margin: "normal",
         variant: "outlined",
         onChange: function onChange(e) {
@@ -23579,7 +23578,7 @@ function CompletedAppointment() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CompletedAppointment);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
   root: {
-    width: '100%'
+    width: "100%"
   },
   container: {
     maxHeight: 440
@@ -23753,20 +23752,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var columns = [{
-  id: 'name',
-  label: 'Name',
+  id: "name",
+  label: "Name",
   minWidth: 170
 }, {
-  id: 'patientId',
-  label: 'Patient ID',
+  id: "patientId",
+  label: "Patient ID",
   minWidth: 100
 }, {
-  id: 'age',
-  label: 'Age',
+  id: "age",
+  label: "Age",
   minWidth: 170
 }, {
-  id: 'status',
-  label: 'Status',
+  id: "status",
+  label: "Status",
   minWidth: 170
 }];
 
@@ -23778,7 +23777,7 @@ function OngoingAppointment() {
       ongoingData = _useState2[0],
       setOngoingData = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       searchState = _useState4[0],
       setSearchState = _useState4[1];
@@ -23795,7 +23794,7 @@ function OngoingAppointment() {
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("doctorAllOngoingAppointment", {
       params: {
         page: pageNumber,
-        searchValue: searchState.length >= 4 ? searchState : ''
+        searchValue: searchState.length >= 4 ? searchState : ""
       }
     }).then(function (res) {
       setOngoingData(res.data);
@@ -23841,9 +23840,8 @@ function OngoingAppointment() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_5__.default, {
         label: "Search",
         id: "patientId",
-        placeholder: "Search (min 4 letters)" // className={classes.textField}
-        ,
-        helperText: "Some important text",
+        placeholder: "Search (min 4 letters)",
+        helperText: "Search (min 4 letters)",
         margin: "normal",
         variant: "outlined",
         onChange: function onChange(e) {
@@ -23920,7 +23918,7 @@ function OngoingAppointment() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OngoingAppointment);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
   root: {
-    width: '100%'
+    width: "100%"
   },
   container: {
     maxHeight: 440
