@@ -33821,8 +33821,8 @@ function AppointmentInfo(props) {
   var classes = useStyles();
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    pharmacyComment: '',
-    id: ''
+    pharmacyComment: "",
+    id: ""
   }),
       _useState2 = _slicedToArray(_useState, 2),
       form = _useState2[0],
@@ -33836,9 +33836,9 @@ function AppointmentInfo(props) {
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    axios__WEBPACK_IMPORTED_MODULE_1___default().post('pharmacyTodayOngoingResultSubmit', form).then(function () {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().post("pharmacyTodayOngoingResultSubmit", form).then(function () {
       props.onClose(null);
-      react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.success("Test Result Saved");
+      react_toastify__WEBPACK_IMPORTED_MODULE_3__.toast.success("Comments Saved");
     }).then(function () {
       props.fetchOngoingData();
     })["catch"](function (err) {
@@ -33954,8 +33954,8 @@ function AppointmentInfo(props) {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AppointmentInfo);
 var useStyles = (0,_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_13__.default)({
   dialogActions: {
-    marginBottom: '15px',
-    marginRight: '15px'
+    marginBottom: "15px",
+    marginRight: "15px"
   }
 });
 
